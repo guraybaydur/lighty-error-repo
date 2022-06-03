@@ -1,0 +1,860 @@
+INFO [main] (Main.java:68) - .__  .__       .__     __              .__           _________________    _______
+ INFO [main] (Main.java:69) - |  | |__| ____ |  |___/  |_ ___.__.    |__| ____    /   _____/\______ \   \      \
+ INFO [main] (Main.java:70) - |  | |  |/ ___\|  |  \   __<   |  |    |  |/  _ \   \_____  \  |    |  \  /   |   \
+ INFO [main] (Main.java:71) - |  |_|  / /_/  >   Y  \  |  \___  |    |  (  <_> )  /        \ |    `   \/    |    \
+ INFO [main] (Main.java:72) - |____/__\___  /|___|  /__|  / ____| /\ |__|\____/  /_______  //_______  /\____|__  /
+ INFO [main] (Main.java:73) -         /_____/     \/      \/      \/                     \/         \/         \/
+ INFO [main] (Main.java:74) - Starting lighty.io RESTCONF-NETCONF example application ...
+ INFO [main] (Main.java:75) - https://lighty.io/
+ INFO [main] (Main.java:76) - https://github.com/PANTHEONtech/lighty
+ INFO [main] (Main.java:92) - using default configuration ...
+ INFO [main] (Main.java:101) - JSON model config snippet: [{"nameSpace":"urn:ietf:params:xml:ns:yang:ietf-yang-types","name":"ietf-yang-types","revision":"2013-07-15"},{"nameSpace":"urn:ietf:params:xml:ns:yang:ietf-inet-types","name":"ietf-inet-types","revision":"2013-07-15"},{"nameSpace":"urn:opendaylight:params:xml:ns:yang:controller:entity-owners","name":"odl-entity-owners"},{"nameSpace":"urn:ietf:params:xml:ns:yang:iana-if-type","name":"iana-if-type","revision":"2021-06-21"},{"nameSpace":"urn:TBD:params:xml:ns:yang:network-topology","name":"network-topology","revision":"2013-10-21"},{"nameSpace":"urn:ietf:params:xml:ns:yang:ietf-yang-library","name":"ietf-yang-library","revision":"2019-01-04"},{"nameSpace":"urn:opendaylight:l2:types","name":"opendaylight-l2-types","revision":"2013-08-27"},{"nameSpace":"urn:opendaylight:params:xml:ns:yang:controller:md:sal:cluster:admin","name":"cluster-admin","revision":"2015-10-13"},{"nameSpace":"urn:sal:restconf:event:subscription","name":"sal-remote-augment","revision":"2014-07-08"},{"nameSpace":"urn:ietf:params:xml:ns:yang:ietf-restconf","name":"ietf-restconf","revision":"2017-01-26"},{"nameSpace":"urn:ietf:params:xml:ns:yang:ietf-restconf-monitoring","name":"ietf-restconf-monitoring","revision":"2017-01-26"},{"nameSpace":"urn:opendaylight:params:xml:ns:yang:controller:config:distributed-datastore-provider","name":"distributed-datastore-provider","revision":"2014-06-12"},{"nameSpace":"urn:opendaylight:params:xml:ns:yang:mdsal:core:general-entity","name":"odl-general-entity","revision":"2015-09-30"},{"nameSpace":"urn:opendaylight:params:xml:ns:yang:controller:md:sal:remote","name":"sal-remote","revision":"2014-01-14"},{"nameSpace":"urn:ietf:params:xml:ns:yang:ietf-interfaces","name":"ietf-interfaces","revision":"2018-02-20"},{"nameSpace":"urn:ietf:params:xml:ns:netconf:base:1.0","name":"ietf-netconf","revision":"2011-06-01"},{"nameSpace":"urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring","name":"ietf-netconf-monitoring","revision":"2010-10-04"},{"nameSpace":"urn:opendaylight:netconf-node-topology","name":"netconf-node-topology","revision":"2015-01-14"},{"nameSpace":"urn:opendaylight:yang:extension:yang-ext","name":"yang-ext","revision":"2013-07-09"},{"nameSpace":"subscribe:to:notification","name":"subscribe-to-notification","revision":"2016-10-28"},{"nameSpace":"urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring-extension","name":"ietf-netconf-monitoring-extension","revision":"2013-12-10"},{"nameSpace":"urn:opendaylight:netconf-node-optional","name":"netconf-node-optional","revision":"2019-06-14"},{"nameSpace":"urn:opendaylight:netconf:keystore","name":"netconf-keystore","revision":"2017-10-17"}]
+ INFO [main] (ControllerConfigUtils.java:248) - Used Akka config file from classpath: singlenode/akka-default.conf
+ INFO [main] (ControllerConfigUtils.java:248) - Used Akka config file from classpath: singlenode/factory-akka-default.conf
+ WARN [main] (AbstractModuleShardConfigProvider.java:35) - Reading Config from resource
+ WARN [main] (AbstractModuleShardConfigProvider.java:35) - Reading Config from resource
+ INFO [main] (LightySystemReadyMonitorImpl.java:27) - SystemReadyMonitorImpl: BOOTING
+ INFO [main] (AbstractLightyModule.java:115) - Submitted start of LightyModule LightyControllerImpl.
+ INFO [pool-3-thread-1] (ActorSystemProviderImpl.java:40) - Creating new ActorSystem
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-4] (Slf4jLogger.scala:107) - Slf4jLogger started
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-4] (MarkerIgnoringBase.java:99) - Remoting started with transport [Artery tcp]; listening on address [akka://opendaylight-cluster-data@127.0.0.1:2550] with UID [8786127015072816047]
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-4] (MarkerIgnoringBase.java:99) - Cluster Node [akka://opendaylight-cluster-data@127.0.0.1:2550] - Starting up, Akka version [2.6.19] ...
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-4] (MarkerIgnoringBase.java:99) - Cluster Node [akka://opendaylight-cluster-data@127.0.0.1:2550] - Registered cluster JMX MBean [akka:type=Cluster]
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-4] (MarkerIgnoringBase.java:99) - Cluster Node [akka://opendaylight-cluster-data@127.0.0.1:2550] - Started up successfully
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-4] (MarkerIgnoringBase.java:99) - Cluster Node [akka://opendaylight-cluster-data@127.0.0.1:2550] - No downing-provider-class configured, manual cluster downing required, see https://doc.akka.io/docs/akka/current/typed/cluster.html#downing
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-4] (MarkerIgnoringBase.java:99) - Cluster Node [akka://opendaylight-cluster-data@127.0.0.1:2550] - Node [akka://opendaylight-cluster-data@127.0.0.1:2550] is JOINING itself (with roles [member-1, dc-default], version [0.0.0]) and forming new cluster
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-4] (MarkerIgnoringBase.java:99) - Cluster Node [akka://opendaylight-cluster-data@127.0.0.1:2550] - is the new leader among reachable nodes (more leaders may exist)
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-4] (MarkerIgnoringBase.java:99) - Cluster Node [akka://opendaylight-cluster-data@127.0.0.1:2550] - Leader is moving node [akka://opendaylight-cluster-data@127.0.0.1:2550] to [Up]
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-13] (MarkerIgnoringBase.java:99) - Loading readiness checks [(cluster-membership,akka.management.cluster.scaladsl.ClusterMembershipCheck), (sharding,akka.cluster.sharding.ClusterShardingHealthCheck)]
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-13] (MarkerIgnoringBase.java:99) - Loading liveness checks []
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-4] (MarkerIgnoringBase.java:99) - Binding Akka Management (HTTP) endpoint to: 127.0.1.1:8558
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-4] (MarkerIgnoringBase.java:99) - Including HTTP management routes for ClusterHttpManagementRouteProvider
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-4] (MarkerIgnoringBase.java:99) - Including HTTP management routes for ClusterBootstrap
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-4] (MarkerIgnoringBase.java:99) - Using self contact point address: http://127.0.1.1:8558
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-4] (MarkerIgnoringBase.java:99) - Including HTTP management routes for HealthCheckRoutes
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-4] (MarkerIgnoringBase.java:99) - Bound Akka Management (HTTP) endpoint to: 127.0.1.1:8558
+ INFO [pool-3-thread-1] (SharedEffectiveModelContextFactory.java:75) - Using weak references
+ WARN [pool-3-thread-1] (DatastoreContext.java:641) - The shard-snapshot-chunk-size configuration parameter is deprecated - use maximum-message-slice-size instead
+ INFO [pool-3-thread-1] (DistributedDataStoreFactory.java:61) - Create data store instance of type : config
+ INFO [pool-3-thread-1] (AbstractDataStore.java:88) - Creating ShardManager : shardmanager-config
+ INFO [opendaylight-cluster-data-shard-dispatcher-16] (ShardManager.java:195) - Starting ShardManager shard-manager-config
+ INFO [opendaylight-cluster-data-akka.persistence.dispatchers.default-plugin-dispatcher-18] (SegmentedFileJournal.java:78) - Initialized with root directory target/segmented-journal with storage MAPPED
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.esotericsoftware.kryo.util.UnsafeUtil (file:/home/guray/Desktop/lighty/lighty-examples/lighty-community-restconf-netconf-app/target/lib/sal-akka-segmented-journal-5.0.5.jar) to constructor java.nio.DirectByteBuffer(long,int,java.lang.Object)
+WARNING: Please consider reporting this to the maintainers of com.esotericsoftware.kryo.util.UnsafeUtil
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+ INFO [opendaylight-cluster-data-shard-dispatcher-16] (ShardManager.java:760) - Recovery complete : shard-manager-config
+ INFO [opendaylight-cluster-data-shard-dispatcher-20] (ShardManager.java:854) - shard-manager-config: Received MemberUp: memberName: MemberName{name=member-1}, address: akka://opendaylight-cluster-data@127.0.0.1:2550
+ INFO [opendaylight-cluster-data-shard-dispatcher-20] (ShardInformation.java:124) - updatePeerAddress for peer member-1-shard-default-config with address akka://opendaylight-cluster-data@127.0.0.1:2550/user/shardmanager-config/member-1-shard-default-config
+ INFO [opendaylight-cluster-data-shard-dispatcher-20] (ShardInformation.java:124) - updatePeerAddress for peer member-1-shard-topology-config with address akka://opendaylight-cluster-data@127.0.0.1:2550/user/shardmanager-config/member-1-shard-topology-config
+ INFO [opendaylight-cluster-data-shard-dispatcher-20] (ShardInformation.java:124) - updatePeerAddress for peer member-1-shard-inventory-config with address akka://opendaylight-cluster-data@127.0.0.1:2550/user/shardmanager-config/member-1-shard-inventory-config
+ INFO [pool-3-thread-1] (DistributedDataStoreFactory.java:86) - Data store config is using ask-based protocol
+ INFO [pool-3-thread-1] (AbstractDataStore.java:257) - Beginning to wait for data store to become ready : ClientIdentifier{frontend=member-1-frontend-datastore-config, generation=3}
+ INFO [opendaylight-cluster-data-shard-dispatcher-20] (ShardInformation.java:124) - updatePeerAddress for peer member-1-shard-default-config with address akka://opendaylight-cluster-data@127.0.0.1:2550/user/shardmanager-config/member-1-shard-default-config
+ INFO [opendaylight-cluster-data-shard-dispatcher-20] (ShardInformation.java:124) - updatePeerAddress for peer member-1-shard-topology-config with address akka://opendaylight-cluster-data@127.0.0.1:2550/user/shardmanager-config/member-1-shard-topology-config
+ INFO [opendaylight-cluster-data-shard-dispatcher-16] (Shard.java:246) - Shard created : member-1-shard-default-config, persistent : true
+ INFO [opendaylight-cluster-data-shard-dispatcher-20] (ShardInformation.java:124) - updatePeerAddress for peer member-1-shard-inventory-config with address akka://opendaylight-cluster-data@127.0.0.1:2550/user/shardmanager-config/member-1-shard-inventory-config
+ INFO [opendaylight-cluster-data-shard-dispatcher-20] (Shard.java:246) - Shard created : member-1-shard-inventory-config, persistent : true
+ INFO [opendaylight-cluster-data-shard-dispatcher-22] (Shard.java:246) - Shard created : member-1-shard-topology-config, persistent : true
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-4] (RoleChangeNotifier.java:43) - RoleChangeNotifier:akka://opendaylight-cluster-data@127.0.0.1:2550/user/shardmanager-config/member-1-shard-topology-config/member-1-shard-topology-config-notifier#1300987227 created and ready for shard:member-1-shard-topology-config
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-13] (RoleChangeNotifier.java:43) - RoleChangeNotifier:akka://opendaylight-cluster-data@127.0.0.1:2550/user/shardmanager-config/member-1-shard-inventory-config/member-1-shard-inventory-config-notifier#-1349470427 created and ready for shard:member-1-shard-inventory-config
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-13] (RoleChangeNotifier.java:43) - RoleChangeNotifier:akka://opendaylight-cluster-data@127.0.0.1:2550/user/shardmanager-config/member-1-shard-default-config/member-1-shard-default-config-notifier#990499690 created and ready for shard:member-1-shard-default-config
+ INFO [opendaylight-cluster-data-shard-dispatcher-20] (RaftActor.java:147) - Starting recovery for member-1-shard-inventory-config with journal batch size 1
+ INFO [opendaylight-cluster-data-shard-dispatcher-22] (RaftActor.java:147) - Starting recovery for member-1-shard-topology-config with journal batch size 1
+ INFO [opendaylight-cluster-data-shard-dispatcher-16] (RaftActor.java:147) - Starting recovery for member-1-shard-default-config with journal batch size 1
+ INFO [opendaylight-cluster-data-shard-dispatcher-24] (RaftActorRecoverySupport.java:292) - member-1-shard-inventory-config: Recovery completed  in 1.636 ms - Switching actor to Follower - last log index = 2, last log term = 3, snapshot index = -1, snapshot term = -1, journal size = 3
+ INFO [opendaylight-cluster-data-shard-dispatcher-23] (RaftActorRecoverySupport.java:292) - member-1-shard-default-config: Recovery completed  in 162.7 μs - Switching actor to Follower - last log index = 2, last log term = 3, snapshot index = -1, snapshot term = -1, journal size = 3
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-29] (RoleChangeNotifier.java:79) - RoleChangeNotifier for member-1-shard-default-config , received role change from null to Follower
+ INFO [opendaylight-cluster-data-shard-dispatcher-23] (Candidate.java:198) - member-1-shard-default-config (Candidate): Starting new election term 4
+ INFO [opendaylight-cluster-data-shard-dispatcher-23] (AbstractRaftActorBehavior.java:449) - member-1-shard-default-config (Follower) :- Switching from behavior Follower to Candidate, election term: 4
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-30] (RoleChangeNotifier.java:79) - RoleChangeNotifier for member-1-shard-inventory-config , received role change from null to Follower
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-4] (RoleChangeNotifier.java:79) - RoleChangeNotifier for member-1-shard-default-config , received role change from Follower to Candidate
+ INFO [opendaylight-cluster-data-shard-dispatcher-24] (Candidate.java:198) - member-1-shard-inventory-config (Candidate): Starting new election term 4
+ INFO [opendaylight-cluster-data-shard-dispatcher-24] (AbstractRaftActorBehavior.java:449) - member-1-shard-inventory-config (Follower) :- Switching from behavior Follower to Candidate, election term: 4
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-30] (RoleChangeNotifier.java:79) - RoleChangeNotifier for member-1-shard-inventory-config , received role change from Follower to Candidate
+ INFO [opendaylight-cluster-data-shard-dispatcher-28] (AbstractRaftActorBehavior.java:449) - member-1-shard-default-config (Candidate) :- Switching from behavior Candidate to Leader, election term: 4
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-26] (RoleChangeNotifier.java:79) - RoleChangeNotifier for member-1-shard-default-config , received role change from Candidate to Leader
+ INFO [opendaylight-cluster-data-shard-dispatcher-23] (AbstractRaftActorBehavior.java:449) - member-1-shard-inventory-config (Candidate) :- Switching from behavior Candidate to Leader, election term: 4
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-26] (RoleChangeNotifier.java:79) - RoleChangeNotifier for member-1-shard-inventory-config , received role change from Candidate to Leader
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-26] (RoleChangeNotifier.java:61) - RoleChangeNotifier for member-1-shard-inventory-config , registered listener akka://opendaylight-cluster-data/user/shardmanager-config
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-26] (RoleChangeNotifier.java:61) - RoleChangeNotifier for member-1-shard-default-config , registered listener akka://opendaylight-cluster-data/user/shardmanager-config
+ INFO [opendaylight-cluster-data-shard-dispatcher-20] (ShardManager.java:620) - shard-manager-config: Received LeaderStateChanged message: LeaderStateChanged [memberId=member-1-shard-inventory-config, leaderId=member-1-shard-inventory-config, leaderPayloadVersion=12]
+ INFO [opendaylight-cluster-data-shard-dispatcher-20] (ShardManager.java:674) - shard-manager-config: Received role changed for member-1-shard-inventory-config from Candidate to Leader
+ INFO [opendaylight-cluster-data-shard-dispatcher-23] (ShardManager.java:620) - shard-manager-config: Received LeaderStateChanged message: LeaderStateChanged [memberId=member-1-shard-default-config, leaderId=member-1-shard-default-config, leaderPayloadVersion=12]
+ INFO [opendaylight-cluster-data-shard-dispatcher-23] (ShardManager.java:674) - shard-manager-config: Received role changed for member-1-shard-default-config from Candidate to Leader
+ INFO [opendaylight-cluster-data-shard-dispatcher-20] (RaftActorRecoverySupport.java:292) - member-1-shard-topology-config: Recovery completed  in 138.1 ms - Switching actor to Follower - last log index = 17, last log term = 3, snapshot index = -1, snapshot term = -1, journal size = 18
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-26] (RoleChangeNotifier.java:79) - RoleChangeNotifier for member-1-shard-topology-config , received role change from null to Follower
+ INFO [opendaylight-cluster-data-shard-dispatcher-20] (Candidate.java:198) - member-1-shard-topology-config (Candidate): Starting new election term 4
+ INFO [opendaylight-cluster-data-shard-dispatcher-20] (AbstractRaftActorBehavior.java:449) - member-1-shard-topology-config (Follower) :- Switching from behavior Follower to Candidate, election term: 4
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-30] (RoleChangeNotifier.java:79) - RoleChangeNotifier for member-1-shard-topology-config , received role change from Follower to Candidate
+ INFO [opendaylight-cluster-data-shard-dispatcher-28] (AbstractRaftActorBehavior.java:449) - member-1-shard-topology-config (Candidate) :- Switching from behavior Candidate to Leader, election term: 4
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-4] (RoleChangeNotifier.java:79) - RoleChangeNotifier for member-1-shard-topology-config , received role change from Candidate to Leader
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-4] (RoleChangeNotifier.java:61) - RoleChangeNotifier for member-1-shard-topology-config , registered listener akka://opendaylight-cluster-data/user/shardmanager-config
+ INFO [opendaylight-cluster-data-shard-dispatcher-27] (ShardManager.java:620) - shard-manager-config: Received LeaderStateChanged message: LeaderStateChanged [memberId=member-1-shard-topology-config, leaderId=member-1-shard-topology-config, leaderPayloadVersion=12]
+ INFO [opendaylight-cluster-data-shard-dispatcher-27] (ShardManager.java:674) - shard-manager-config: Received role changed for member-1-shard-topology-config from Candidate to Leader
+ INFO [opendaylight-cluster-data-shard-dispatcher-27] (ShardManager.java:614) - shard-manager-config: All Shards are ready - data store config is ready
+ WARN [pool-3-thread-1] (DatastoreContext.java:641) - The shard-snapshot-chunk-size configuration parameter is deprecated - use maximum-message-slice-size instead
+ INFO [pool-3-thread-1] (DistributedDataStoreFactory.java:61) - Create data store instance of type : operational
+ INFO [pool-3-thread-1] (AbstractDataStore.java:88) - Creating ShardManager : shardmanager-operational
+ INFO [pool-3-thread-1] (DistributedDataStoreFactory.java:86) - Data store operational is using ask-based protocol
+ INFO [pool-3-thread-1] (AbstractDataStore.java:257) - Beginning to wait for data store to become ready : ClientIdentifier{frontend=member-1-frontend-datastore-operational, generation=3}
+ INFO [opendaylight-cluster-data-shard-dispatcher-20] (ShardManager.java:195) - Starting ShardManager shard-manager-operational
+ INFO [opendaylight-cluster-data-shard-dispatcher-23] (ShardManager.java:760) - Recovery complete : shard-manager-operational
+ INFO [opendaylight-cluster-data-shard-dispatcher-27] (Shard.java:246) - Shard created : member-1-shard-default-operational, persistent : false
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-25] (RoleChangeNotifier.java:43) - RoleChangeNotifier:akka://opendaylight-cluster-data@127.0.0.1:2550/user/shardmanager-operational/member-1-shard-default-operational/member-1-shard-default-operational-notifier#955131366 created and ready for shard:member-1-shard-default-operational
+ INFO [opendaylight-cluster-data-shard-dispatcher-20] (Shard.java:246) - Shard created : member-1-shard-topology-operational, persistent : false
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-4] (RoleChangeNotifier.java:43) - RoleChangeNotifier:akka://opendaylight-cluster-data@127.0.0.1:2550/user/shardmanager-operational/member-1-shard-topology-operational/member-1-shard-topology-operational-notifier#59374983 created and ready for shard:member-1-shard-topology-operational
+ INFO [opendaylight-cluster-data-shard-dispatcher-20] (RaftActor.java:147) - Starting recovery for member-1-shard-topology-operational with journal batch size 1
+ INFO [opendaylight-cluster-data-shard-dispatcher-27] (RaftActor.java:147) - Starting recovery for member-1-shard-default-operational with journal batch size 1
+ INFO [opendaylight-cluster-data-shard-dispatcher-28] (Shard.java:246) - Shard created : member-1-shard-inventory-operational, persistent : false
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-29] (RoleChangeNotifier.java:43) - RoleChangeNotifier:akka://opendaylight-cluster-data@127.0.0.1:2550/user/shardmanager-operational/member-1-shard-inventory-operational/member-1-shard-inventory-operational-notifier#113940873 created and ready for shard:member-1-shard-inventory-operational
+ INFO [opendaylight-cluster-data-shard-dispatcher-28] (RaftActor.java:147) - Starting recovery for member-1-shard-inventory-operational with journal batch size 1
+ INFO [opendaylight-cluster-data-shard-dispatcher-23] (ShardManager.java:854) - shard-manager-operational: Received MemberUp: memberName: MemberName{name=member-1}, address: akka://opendaylight-cluster-data@127.0.0.1:2550
+ INFO [opendaylight-cluster-data-akka.persistence.dispatchers.default-plugin-dispatcher-32] (SegmentedFileJournal.java:78) - Initialized with root directory segmented-journal with storage DISK
+ INFO [opendaylight-cluster-data-shard-dispatcher-23] (ShardInformation.java:124) - updatePeerAddress for peer member-1-shard-default-operational with address akka://opendaylight-cluster-data@127.0.0.1:2550/user/shardmanager-operational/member-1-shard-default-operational
+ INFO [opendaylight-cluster-data-shard-dispatcher-23] (ShardInformation.java:124) - updatePeerAddress for peer member-1-shard-topology-operational with address akka://opendaylight-cluster-data@127.0.0.1:2550/user/shardmanager-operational/member-1-shard-topology-operational
+ INFO [opendaylight-cluster-data-shard-dispatcher-23] (ShardInformation.java:124) - updatePeerAddress for peer member-1-shard-inventory-operational with address akka://opendaylight-cluster-data@127.0.0.1:2550/user/shardmanager-operational/member-1-shard-inventory-operational
+ INFO [opendaylight-cluster-data-shard-dispatcher-23] (RaftActorRecoverySupport.java:292) - member-1-shard-topology-operational: Recovery completed  - Switching actor to Follower - last log index = -1, last log term = -1, snapshot index = -1, snapshot term = -1, journal size = 0
+ INFO [opendaylight-cluster-data-shard-dispatcher-22] (RaftActorRecoverySupport.java:292) - member-1-shard-inventory-operational: Recovery completed  - Switching actor to Follower - last log index = -1, last log term = -1, snapshot index = -1, snapshot term = -1, journal size = 0
+ INFO [opendaylight-cluster-data-shard-dispatcher-24] (Candidate.java:198) - member-1-shard-topology-operational (Candidate): Starting new election term 4
+ INFO [opendaylight-cluster-data-shard-dispatcher-24] (AbstractRaftActorBehavior.java:449) - member-1-shard-topology-operational (Follower) :- Switching from behavior Follower to Candidate, election term: 4
+ INFO [opendaylight-cluster-data-shard-dispatcher-22] (Candidate.java:198) - member-1-shard-inventory-operational (Candidate): Starting new election term 4
+ INFO [opendaylight-cluster-data-shard-dispatcher-22] (AbstractRaftActorBehavior.java:449) - member-1-shard-inventory-operational (Follower) :- Switching from behavior Follower to Candidate, election term: 4
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-30] (RoleChangeNotifier.java:79) - RoleChangeNotifier for member-1-shard-inventory-operational , received role change from null to Follower
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-30] (RoleChangeNotifier.java:79) - RoleChangeNotifier for member-1-shard-inventory-operational , received role change from Follower to Candidate
+ INFO [opendaylight-cluster-data-shard-dispatcher-23] (RaftActorRecoverySupport.java:292) - member-1-shard-default-operational: Recovery completed  - Switching actor to Follower - last log index = -1, last log term = -1, snapshot index = -1, snapshot term = -1, journal size = 0
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-13] (RoleChangeNotifier.java:79) - RoleChangeNotifier for member-1-shard-default-operational , received role change from null to Follower
+ INFO [opendaylight-cluster-data-shard-dispatcher-23] (Candidate.java:198) - member-1-shard-default-operational (Candidate): Starting new election term 4
+ INFO [opendaylight-cluster-data-shard-dispatcher-23] (AbstractRaftActorBehavior.java:449) - member-1-shard-default-operational (Follower) :- Switching from behavior Follower to Candidate, election term: 4
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-30] (RoleChangeNotifier.java:79) - RoleChangeNotifier for member-1-shard-default-operational , received role change from Follower to Candidate
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-4] (RoleChangeNotifier.java:79) - RoleChangeNotifier for member-1-shard-topology-operational , received role change from null to Follower
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-4] (RoleChangeNotifier.java:79) - RoleChangeNotifier for member-1-shard-topology-operational , received role change from Follower to Candidate
+ INFO [opendaylight-cluster-data-shard-dispatcher-31] (AbstractRaftActorBehavior.java:449) - member-1-shard-topology-operational (Candidate) :- Switching from behavior Candidate to Leader, election term: 4
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-13] (RoleChangeNotifier.java:79) - RoleChangeNotifier for member-1-shard-topology-operational , received role change from Candidate to Leader
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-13] (RoleChangeNotifier.java:61) - RoleChangeNotifier for member-1-shard-topology-operational , registered listener akka://opendaylight-cluster-data/user/shardmanager-operational
+ INFO [opendaylight-cluster-data-shard-dispatcher-28] (ShardManager.java:620) - shard-manager-operational: Received LeaderStateChanged message: LeaderStateChanged [memberId=member-1-shard-topology-operational, leaderId=member-1-shard-topology-operational, leaderPayloadVersion=12]
+ INFO [opendaylight-cluster-data-shard-dispatcher-28] (ShardManager.java:674) - shard-manager-operational: Received role changed for member-1-shard-topology-operational from Candidate to Leader
+ INFO [opendaylight-cluster-data-shard-dispatcher-28] (AbstractRaftActorBehavior.java:449) - member-1-shard-inventory-operational (Candidate) :- Switching from behavior Candidate to Leader, election term: 4
+ INFO [opendaylight-cluster-data-shard-dispatcher-16] (AbstractRaftActorBehavior.java:449) - member-1-shard-default-operational (Candidate) :- Switching from behavior Candidate to Leader, election term: 4
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-13] (RoleChangeNotifier.java:79) - RoleChangeNotifier for member-1-shard-default-operational , received role change from Candidate to Leader
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-25] (RoleChangeNotifier.java:79) - RoleChangeNotifier for member-1-shard-inventory-operational , received role change from Candidate to Leader
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-13] (RoleChangeNotifier.java:61) - RoleChangeNotifier for member-1-shard-default-operational , registered listener akka://opendaylight-cluster-data/user/shardmanager-operational
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-25] (RoleChangeNotifier.java:61) - RoleChangeNotifier for member-1-shard-inventory-operational , registered listener akka://opendaylight-cluster-data/user/shardmanager-operational
+ INFO [opendaylight-cluster-data-shard-dispatcher-27] (ShardManager.java:620) - shard-manager-operational: Received LeaderStateChanged message: LeaderStateChanged [memberId=member-1-shard-default-operational, leaderId=member-1-shard-default-operational, leaderPayloadVersion=12]
+ INFO [opendaylight-cluster-data-shard-dispatcher-27] (ShardManager.java:674) - shard-manager-operational: Received role changed for member-1-shard-default-operational from Candidate to Leader
+ INFO [opendaylight-cluster-data-shard-dispatcher-20] (ShardManager.java:620) - shard-manager-operational: Received LeaderStateChanged message: LeaderStateChanged [memberId=member-1-shard-inventory-operational, leaderId=member-1-shard-inventory-operational, leaderPayloadVersion=12]
+ INFO [opendaylight-cluster-data-shard-dispatcher-20] (ShardManager.java:674) - shard-manager-operational: Received role changed for member-1-shard-inventory-operational from Candidate to Leader
+ INFO [opendaylight-cluster-data-shard-dispatcher-20] (ShardManager.java:614) - shard-manager-operational: All Shards are ready - data store operational is ready
+ INFO [pool-3-thread-1] (ThreadFactoryProvider.java:70) - ThreadFactory created: CommitFutures
+ INFO [pool-3-thread-1] (DOMRpcRouter.java:124) - DOM RPC/Action router started
+ INFO [pool-3-thread-1] (RemoteOpsProvider.java:61) - Starting Remote Ops service...
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-29] (MarkerIgnoringBase.java:99) - Singleton manager starting singleton actor [akka://opendaylight-cluster-data/system/singletonManagerOwnerSupervisor/OwnerSupervisor]
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-26] (MarkerIgnoringBase.java:99) - ClusterSingletonManager state change [Start -> Oldest]
+ INFO [pool-3-thread-1] (LightyControllerImpl.java:369) - Lighty controller started in 5.182 s
+ INFO [pool-3-thread-1] (AbstractLightyModule.java:121) - LightyModule LightyControllerImpl started.
+ INFO [main] (AbstractLightyModule.java:115) - Submitted start of LightyModule SwaggerLighty.
+ INFO [pool-8-thread-1] (SwaggerLighty.java:59) - initializing swagger DRAFT_18
+ INFO [pool-8-thread-1] (SwaggerLighty.java:63) - basePath: restconf
+ INFO [pool-8-thread-1] (Log.java:170) - Logging initialized @6502ms to org.eclipse.jetty.util.log.Slf4jLog
+ INFO [pool-8-thread-1] (SwaggerLighty.java:112) - initializing swagger UI at: http(s)://{hostname:port}/apidoc/explorer/index.html
+ INFO [pool-8-thread-1] (SwaggerLighty.java:114) - externalResource: jar:file:/home/guray/Desktop/lighty/lighty-examples/lighty-community-restconf-netconf-app/target/lib/sal-rest-docgen-3.0.3.jar!/explorer
+ INFO [pool-8-thread-1] (SwaggerLighty.java:94) - adding context handler ...
+ INFO [pool-8-thread-1] (AbstractLightyModule.java:121) - LightyModule SwaggerLighty started.
+ INFO [main] (AbstractLightyModule.java:115) - Submitted start of LightyModule CommunityRestConf.
+ INFO [pool-9-thread-1] (CommunityRestConf.java:111) - Starting RestConfProvider websocket port: PortNumber{_value=8185}
+ INFO [pool-9-thread-1] (WebSocketServer.java:63) - Created WebSocketServer on 127.0.0.1:8185
+ INFO [pool-9-thread-1] (CommunityRestConf.java:129) - Starting jsonRestconfService DRAFT_18
+ INFO [Web socket server on port PortNumber{_value=8185}] (WebSocketServer.java:122) - Web socket server started at address 127.0.0.1, port 8185.
+ INFO [pool-9-thread-1] (CommunityRestConf.java:150) - RestConf init complete, starting Jetty
+ INFO [pool-9-thread-1] (CommunityRestConf.java:151) - http address:port localhost/127.0.0.1:8888, url prefix: /restconf
+ INFO [pool-9-thread-1] (CommunityRestConf.java:186) - Lighty RestConf started in 212.2 ms
+ INFO [pool-9-thread-1] (AbstractLightyModule.java:121) - LightyModule CommunityRestConf started.
+ INFO [main] (Server.java:375) - jetty-9.4.46.v20220331; built: 2022-03-31T16:38:08.030Z; git: bc17a0369a11ecf40bb92c839b9ef0a8ac50ea18; jvm 11.0.15+10-Ubuntu-0ubuntu0.20.04.1
+ INFO [main] (DefaultSessionIdManager.java:334) - DefaultSessionIdManager workerName=node0
+ INFO [main] (DefaultSessionIdManager.java:339) - No SessionScavenger set, using defaults
+ INFO [main] (HouseKeeper.java:132) - node0 Scavenging every 660000ms
+Jun 03, 2022 7:21:04 AM org.glassfish.jersey.internal.inject.Providers checkProviderRuntime
+WARNING: A provider org.opendaylight.netconf.sal.rest.doc.impl.ApiDocServiceImpl registered in SERVER runtime does not implement any provider interfaces applicable in the SERVER runtime. Due to constraint configuration problems the provider org.opendaylight.netconf.sal.rest.doc.impl.ApiDocServiceImpl will be ignored. 
+ INFO [opendaylight-cluster-data-akka.actor.default-dispatcher-25] (MarkerIgnoringBase.java:99) - Singleton identified at [akka://opendaylight-cluster-data/system/singletonManagerOwnerSupervisor/OwnerSupervisor]
+ INFO [main] (ContextHandler.java:921) - Started o.e.j.s.ServletContextHandler@3b8cbf84{/apidoc,null,AVAILABLE}
+Jun 03, 2022 7:21:04 AM org.glassfish.jersey.internal.inject.Providers checkProviderRuntime
+WARNING: A provider org.opendaylight.restconf.nb.rfc8040.rests.services.impl.RestconfStreamsSubscriptionServiceImpl registered in SERVER runtime does not implement any provider interfaces applicable in the SERVER runtime. Due to constraint configuration problems the provider org.opendaylight.restconf.nb.rfc8040.rests.services.impl.RestconfStreamsSubscriptionServiceImpl will be ignored. 
+Jun 03, 2022 7:21:04 AM org.glassfish.jersey.internal.inject.Providers checkProviderRuntime
+WARNING: A provider org.opendaylight.restconf.nb.rfc8040.rests.services.impl.RestconfDataServiceImpl registered in SERVER runtime does not implement any provider interfaces applicable in the SERVER runtime. Due to constraint configuration problems the provider org.opendaylight.restconf.nb.rfc8040.rests.services.impl.RestconfDataServiceImpl will be ignored. 
+Jun 03, 2022 7:21:04 AM org.glassfish.jersey.internal.inject.Providers checkProviderRuntime
+WARNING: A provider org.opendaylight.restconf.nb.rfc8040.rests.services.impl.RestconfImpl registered in SERVER runtime does not implement any provider interfaces applicable in the SERVER runtime. Due to constraint configuration problems the provider org.opendaylight.restconf.nb.rfc8040.rests.services.impl.RestconfImpl will be ignored. 
+Jun 03, 2022 7:21:04 AM org.glassfish.jersey.internal.inject.Providers checkProviderRuntime
+WARNING: A provider org.opendaylight.restconf.nb.rfc8040.rests.services.impl.RestconfOperationsServiceImpl registered in SERVER runtime does not implement any provider interfaces applicable in the SERVER runtime. Due to constraint configuration problems the provider org.opendaylight.restconf.nb.rfc8040.rests.services.impl.RestconfOperationsServiceImpl will be ignored. 
+Jun 03, 2022 7:21:04 AM org.glassfish.jersey.internal.inject.Providers checkProviderRuntime
+WARNING: A provider org.opendaylight.restconf.nb.rfc8040.rests.services.impl.RestconfInvokeOperationsServiceImpl registered in SERVER runtime does not implement any provider interfaces applicable in the SERVER runtime. Due to constraint configuration problems the provider org.opendaylight.restconf.nb.rfc8040.rests.services.impl.RestconfInvokeOperationsServiceImpl will be ignored. 
+Jun 03, 2022 7:21:04 AM org.glassfish.jersey.internal.inject.Providers checkProviderRuntime
+WARNING: A provider org.opendaylight.restconf.nb.rfc8040.rests.services.impl.RestconfSchemaServiceImpl registered in SERVER runtime does not implement any provider interfaces applicable in the SERVER runtime. Due to constraint configuration problems the provider org.opendaylight.restconf.nb.rfc8040.rests.services.impl.RestconfSchemaServiceImpl will be ignored. 
+ INFO [main] (ContextHandler.java:921) - Started o.e.j.s.ServletContextHandler@3f8087e5{/restconf,null,AVAILABLE}
+Jun 03, 2022 7:21:04 AM org.glassfish.jersey.internal.inject.Providers checkProviderRuntime
+WARNING: A provider io.lighty.modules.northbound.restconf.community.impl.root.resource.discovery.RootResourceDiscoveryServiceImpl registered in SERVER runtime does not implement any provider interfaces applicable in the SERVER runtime. Due to constraint configuration problems the provider io.lighty.modules.northbound.restconf.community.impl.root.resource.discovery.RootResourceDiscoveryServiceImpl will be ignored. 
+ INFO [main] (ContextHandler.java:921) - Started o.e.j.s.ServletContextHandler@55dbcb2b{/.well-known,null,AVAILABLE}
+ INFO [main] (AbstractConnector.java:333) - Started ServerConnector@fd0e5b6{HTTP/1.1, (http/1.1)}{localhost:8888}
+ INFO [main] (Server.java:415) - Started @7633ms
+ INFO [main] (CommunityRestConf.java:229) - Jetty started
+ INFO [main] (AbstractLightyModule.java:115) - Submitted start of LightyModule NetconfTopologyPlugin.
+ INFO [pool-13-thread-1] (DefaultSchemaResourceManager.java:71) - Schema Resource Manager instantiated on cache/schema
+ INFO [pool-13-thread-1] (AbstractLightyModule.java:121) - LightyModule NetconfTopologyPlugin started.
+ INFO [main] (Main.java:114) - lighty.io and RESTCONF-NETCONF started in 8.059 s
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ INFO [qtp2086068243-70] (ApiPathParser.java:98) - Consecutive slashes in REST URLs will be rejected
+ INFO [opendaylight-cluster-data-notification-dispatcher-35] (AbstractNetconfTopology.java:134) - Connecting RemoteDevice{Uri{_value=lighty16-1}} , with config Node{nodeId=Uri{_value=lighty16-1}, augmentation=[NetconfNode{actorResponseWaitTime=5, betweenAttemptsTimeoutMillis=2000, concurrentRpcLimit=0, connectionTimeoutMillis=20000, credentials=***, defaultRequestTimeoutMillis=60000, host=Host{_domainName=DomainName{_value=localhost}}, keepaliveDelay=120, maxConnectionAttempts=0, port=PortNumber{_value=2022}, reconnectOnChangedSchema=false, schemaCacheDirectory=schema, schemaless=false, sleepFactor=1.5, tcpOnly=false}]}
+ INFO [opendaylight-cluster-data-notification-dispatcher-35] (AbstractNetconfTopology.java:221) - Adding keepalive facade, for device Uri{_value=lighty16-1}
+ INFO [opendaylight-cluster-data-notification-dispatcher-35] (AbstractNetconfTopology.java:252) - Concurrent rpc limit is smaller than 1, no limit will be enforced for device RemoteDevice{lighty16-1}
+ INFO [nioEventLoopGroup-3-1] (AbstractSecurityProviderRegistrar.java:112) - getOrCreateProvider(BC) created instance of org.bouncycastle.jce.provider.BouncyCastleProvider
+ INFO [nioEventLoopGroup-3-1] (AbstractSecurityProviderRegistrar.java:112) - getOrCreateProvider(EdDSA) created instance of org.opendaylight.netconf.shaded.eddsa.EdDSASecurityProvider
+ INFO [nioEventLoopGroup-3-1] (DefaultIoServiceFactoryFactory.java:68) - No detected/configured IoServiceFactoryFactory using Nio2ServiceFactoryFactory
+ WARN [sshd-NetconfSshClient[539ab18f]-nio2-thread-2] (StaticServerKeyVerifier.java:59) - Server at localhost/127.0.0.1:2022 presented unverified RSA key: SHA256:MCzHpBOiA7VcK5RNw/BCv8U0zAmnmrrM/FBCZlyzsxI
+ WARN [default-pool-5-1] (DeviceSourcesResolver.java:72) - RemoteDevice{lighty16-1}: Netconf device provides additional yang models not reported in hello message capabilities: [(urn:3gpp:sa5:_3gpp-5gc-nrm-nwdaffunction?revision=2020-11-05)_3gpp-5gc-nrm-nwdaffunction, (urn:3gpp:sa5:_3gpp-5gc-nrm-dynamic5qiset?revision=2020-09-30)_3gpp-5gc-nrm-dynamic5qiset, (urn:3gpp:sa5:_3gpp-5gc-nrm-predefinedpccruleset?revision=2020-09-30)_3gpp-5gc-nrm-predefinedpccruleset, (urn:3gpp:sa5:_3gpp-common-subscription-control?revision=2021-01-16)_3gpp-common-subscription-control, (http://tail-f.com/ns/progress?revision=2020-06-25)tailf-progress, (urn:3gpp:sa5:_3gpp-common-subnetwork?revision=2021-01-16)_3gpp-common-subnetwork, (urn:3gpp:sa5:_3gpp-ns-nrm-networkslicesubnet?revision=2021-07-16)_3gpp-ns-nrm-sliceprofile, (urn:3gpp:sa5:_3gpp-5gc-nrm-seppfunction?revision=2020-08-03)_3gpp-5gc-nrm-seppfunction, (urn:ietf:params:xml:ns:yang:ietf-origin?revision=2018-02-14)ietf-origin, (urn:3gpp:sa5:_3gpp-nr-nrm-eutranetwork?revision=2019-06-17)_3gpp-nr-nrm-eutranetwork, (urn:ietf:params:xml:ns:yang:ietf-restconf?revision=2017-01-26)ietf-restconf, (http://tail-f.com/ns/netconf/inactive/1.0)tailf-netconf-inactive, (urn:3gpp:sa5:_3gpp-nr-nrm-externalnrcellcu?revision=2019-10-28)_3gpp-nr-nrm-externalnrcellcu, (urn:3gpp:sa5:_3gpp-5g-common-yang-types?revision=2021-08-05)_3gpp-5g-common-yang-types, (urn:ietf:params:xml:ns:yang:ietf-yang-library?revision=2019-01-04)ietf-yang-library, (urn:3gpp:sa5:_3gpp-nr-nrm-drachoptimizationfunction?revision=2021-08-05)_3gpp-nr-nrm-drachoptimizationfunction, (urn:3gpp:sa5:_3gpp-nr-nrm-eutrancellrelation?revision=2019-10-28)_3gpp-nr-nrm-eutrancellrelation, (urn:3gpp:sa5:_3gpp-5gc-nrm-GtpUPathQoSMonitoringControl?revision=2020-11-05)_3gpp-5gc-nrm-GtpUPathQoSMonitoringControl, (urn:3gpp:sa5:_3gpp-5gc-nrm-udrfunction?revision=2020-11-05)_3gpp-5gc-nrm-udrfunction, (urn:3gpp:sa5:_3gpp-5gc-nrm-udmfunction?revision=2020-11-05)_3gpp-5gc-nrm-udmfunction, (urn:3gpp:sa5:_3gpp-nr-nrm-externalgnbcucpfunction?revision=2019-10-28)_3gpp-nr-nrm-externalgnbcucpfunction, (urn:3gpp:sa5:_3gpp-5gc-nrm-amfregion?revision=2020-11-05)_3gpp-5gc-nrm-amfregion, (urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications?revision=2019-09-09)ietf-subscribed-notifications, (urn:3gpp:sa5:_3gpp-5gc-nrm-smffunction?revision=2020-11-05)_3gpp-5gc-nrm-smffunction, (urn:3gpp:sa5:_3gpp-ns-nrm-common?revision=2021-07-16)_3gpp-ns-nrm-common, (urn:3gpp:sa5:_3gpp-5gc-nrm-affunction?revision=2019-10-28)_3gpp-5gc-nrm-affunction, (urn:3gpp:sa5:_3gpp-nr-nrm-externalgnbdufunction?revision=2019-10-28)_3gpp-nr-nrm-externalgnbdufunction, (urn:3gpp:sa5:_3gpp-nr-nrm-externalupffunction?revision=2019-10-28)_3gpp-nr-nrm-externalupffunction, (urn:3gpp:sa5:_3gpp-nr-nrm-ep?revision=2021-04-30)_3gpp-nr-nrm-ep, (http://tail-f.com/ns/netconf/transactions/1.0)tailf-netconf-transactions, (urn:3gpp:sa5:_3gpp-nr-nrm-nrcellrelation?revision=2021-01-25)_3gpp-nr-nrm-nrcellrelation, (urn:3gpp:sa5:_3gpp-5gc-nrm-nrffunction?revision=2020-11-05)_3gpp-5gc-nrm-nrffunction, (urn:3gpp:sa5:_3gpp-common-top?revision=2019-06-17)_3gpp-common-top, (urn:3gpp:sa5:_3gpp-5gc-nrm-n3iwffunction?revision=2019-10-28)_3gpp-5gc-nrm-n3iwffunction, (urn:3gpp:sa5:_3gpp-5gc-nrm-configurable5qiset?revision=2020-08-03)_3gpp-5gc-nrm-configurable5qiset, (urn:3gpp:sa5:_3gpp-common-mnsregistry?revision=2021-08-29)_3gpp-common-mnsregistry, (urn:3gpp:sa5:_3gpp-5gc-nrm-nfprofile?revision=2019-06-17)_3gpp-5gc-nrm-nfprofile, (urn:3gpp:sa5:_3gpp-nr-nrm-nrnetwork-commonbeamformingfunction?revision=2019-11-22)_3gpp-nr-nrm-commonbeamformingfunction, (urn:3gpp:sa5:_3gpp-nr-nrm-externalenbfunction?revision=2019-10-28)_3gpp-nr-nrm-externalenbfunction, (urn:3gpp:sa5:_3gpp-nr-nrm-nrcellcu?revision=2021-01-25)_3gpp-nr-nrm-nrcellcu, (urn:3gpp:sa5:_3gpp-5gc-nrm-extternalseppfunction?revision=2019-11-17)_3gpp-5gc-nrm-externalseppfunction, (urn:3gpp:sa5:_3gpp-5gc-nrm-externalnrffunction?revision=2019-10-28)_3gpp-5gc-nrm-externalnrffunction, (urn:3gpp:sa5:_3gpp-common-yang-types?revision=2020-11-06)_3gpp-common-yang-types, (urn:3gpp:sa5:_3gpp-nr-nrm-nrnetwork-nrfrequency?revision=2019-10-28)_3gpp-nr-nrm-nrfrequency, (http://tail-f.com/ns/netconf/with-rollback-id?revision=2020-06-25)tailf-netconf-with-rollback-id, (urn:3gpp:sa5:_3gpp-5gc-nrm-nfservice?revision=2021-01-25)_3gpp-5gc-nrm-nfservice, (urn:3gpp:sa5:_3gpp-common-yang-extensions?revision=2019-06-23)_3gpp-common-yang-extensions, (urn:3gpp:sa5:_3gpp-nr-nrm-externalservinggwfunction?revision=2019-10-28)_3gpp-nr-nrm-externalservinggwfunction, (urn:ietf:params:xml:ns:yang:ietf-netconf-nmda?revision=2019-01-07)ietf-netconf-nmda, (urn:3gpp:sa5:_3gpp-nr-nrm-desmanagementfunction?revision=2021-08-05)_3gpp-nr-nrm-desmanagementfunction, (http://tail-f.com/ns/netconf/extensions?revision=2019-04-09)tailf-netconf-extensions, (urn:3gpp:sa5:_3gpp-nr-nrm-eutranfrequency?revision=2019-10-28)_3gpp-nr-nrm-eutranfrequency, (urn:3gpp:sa5:_3gpp-nr-nrm-gnbcuupfunction?revision=2020-11-05)_3gpp-nr-nrm-gnbcuupfunction, (urn:ietf:params:xml:ns:yang:ietf-ip?revision=2018-02-22)ietf-ip, (urn:3gpp:sa5:_3gpp-common-trace?revision=2021-07-22)_3gpp-common-trace, (urn:3gpp:tsg:sa5:nrm:_3gpp-5gc-nrm-ep?revision=2019-11-18)_3gpp-5gc-nrm-ep, (urn:3gpp:sa5:_3gpp-5gc-nrm-scpfunction?revision=2019-10-20)_3gpp-5gc-nrm-scpfunction, (urn:ietf:params:xml:ns:yang:ietf-interfaces?revision=2018-02-20)ietf-interfaces, (urn:3gpp:sa5:_3gpp-nr-nrm-nrnetwork-nrsectorcarrier?revision=2020-05-28)_3gpp-nr-nrm-nrsectorcarrier, (urn:3gpp:sa5:_3gpp-5gc-nrm-pcffunction?revision=2020-11-05)_3gpp-5gc-nrm-pcffunction, (urn:ietf:params:xml:ns:yang:ietf-yang-push?revision=2019-09-09)ietf-yang-push, (urn:3gpp:sa5:_3gpp-5gc-nrm-udsffunction?revision=2020-11-05)_3gpp-5gc-nrm-udsffunction, (urn:3gpp:sa5:_3gpp-common-managed-function?revision=2021-01-25)_3gpp-common-managed-function, (urn:3gpp:sa5:_3gpp-nr-nrm-rrmpolicy?revision=2020-11-05)_3gpp-nr-nrm-rrmpolicy, (urn:3gpp:sa5:_3gpp-nr-nrm-dmrofunction?revision=2021-08-05)_3gpp-nr-nrm-dmrofunction, (urn:3gpp:sa5:_3gpp-nr-nrm-danrmanagementfunction?revision=2020-05-08)_3gpp-nr-nrm-danrmanagementfunction, (urn:3gpp:sa5:_3gpp-nr-nrm-bwp?revision=2020-11-17)_3gpp-nr-nrm-bwp, (http://tail-f.com/ns/netconf/rollback?revision=2018-01-12)tailf-netconf-rollback, (urn:3gpp:sa5:_3gpp-5gc-nrm-neffunction?revision=2020-11-05)_3gpp-5gc-nrm-neffunction, (http://tail-f.com/ns/netconf/forward/1.0)tailf-netconf-forward, (urn:3gpp:sa5:_3gpp-nr-nrm-externaleutrancell?revision=2019-10-28)_3gpp-nr-nrm-externaleutrancell, (urn:3gpp:sa5:_3gpp-5gc-nrm-ausffunction?revision=2020-11-05)_3gpp-5gc-nrm-ausffunction, (urn:3gpp:sa5:_3gpp-nr-nrm-externalgnbcuupfunction?revision=2019-10-28)_3gpp-nr-nrm-externalgnbcuupfunction, (urn:ietf:params:xml:ns:yang:ietf-datastores?revision=2018-02-14)ietf-datastores, (urn:3gpp:sa5:_3gpp-nr-nrm-nrnetwork-beam?revision=2019-11-22)_3gpp-nr-nrm-beam, (urn:3gpp:sa5:_3gpp-5gc-nrm-FiveQiDscpMappingSet?revision=2020-08-03)_3gpp-5gc-nrm-FiveQiDscpMappingSet, (urn:3gpp:sa5:_3gpp-5gc-nrm-smsffunction?revision=2019-10-25)_3gpp-5gc-nrm-smsffunction, (urn:3gpp:sa5:_3gpp-ns-nrm-networkslice?revision=2020-06-02)_3gpp-ns-nrm-serviceprofile, (urn:3gpp:sa5:_3gpp-ns-nrm-networkslicesubnet?revision=2021-05-05)_3gpp-ns-nrm-networkslicesubnet, (urn:ietf:params:xml:ns:yang:ietf-yang-patch?revision=2017-02-22)ietf-yang-patch, (urn:3gpp:sa5:_3gpp-nr-nrm-cpciconfigurationfunction?revision=2021-08-05)_3gpp-nr-nrm-cpciconfigurationfunction, (urn:3gpp:sa5:_3gpp-5gc-nrm-amffunction?revision=2020-11-05)_3gpp-5gc-nrm-amffunction, (http://tail-f.com/ns/rollback?revision=2020-06-25)tailf-rollback, (http://tail-f.com/ns/netconf/with-transaction-id?revision=2018-11-23)tailf-netconf-with-transaction-id, (urn:3gpp:sa5:_3gpp-nr-nrm-cesmanagementfunction?revision=2021-08-05)_3gpp-nr-nrm-cesmanagementfunction, (urn:3gpp:sa5:_3gpp-nr-nrm-externalamffunction?revision=2019-10-28)_3gpp-nr-nrm-externalamffunction, (urn:3gpp:sa5:_3gpp-nr-nrm-nrcelldu?revision=2021-01-25)_3gpp-nr-nrm-nrcelldu, (urn:3gpp:sa5:_3gpp-common-managed-element?revision=2021-01-16)_3gpp-common-managed-element, (urn:3gpp:sa5_3gpp-5gc-nrm-dnfunction?revision=2019-10-28)_3gpp-5gc-nrm-dnfunction, (urn:ietf:params:xml:ns:yang:ietf-network-instance?revision=2019-01-21)ietf-network-instance, (urn:3gpp:sa5:_3gpp-ns-nrm-networkslice?revision=2020-06-02)_3gpp-ns-nrm-networkslice, (urn:3gpp:sa5:_3gpp-nr-nrm-nrnetwork?revision=2019-06-17)_3gpp-nr-nrm-nrnetwork, (urn:3gpp:sa5:_3gpp-common-ep-rp?revision=2020-06-08)_3gpp-common-ep-rp, (urn:3gpp:sa5:_3gpp-common-fm?revision=2021-06-02)_3gpp-common-fm, (urn:3gpp:sa5:_3gpp-5gc-nrm-QFQoSMonitoringControl?revision=2020-11-05)_3gpp-5gc-nrm-QFQoSMonitoringControl, (http://tail-f.com/yang/common?revision=2020-11-26)tailf-cli-extensions, (urn:3gpp:sa5:_3gpp-nr-nrm-gnbcucpfunction?revision=2020-10-02)_3gpp-nr-nrm-gnbcucpfunction, (urn:3gpp:sa5:_3gpp-common-measurements?revision=2021-07-22)_3gpp-common-measurements, (urn:3gpp:sa5:_3gpp-5gc-nrm-amfset?revision=2020-11-05)_3gpp-5gc-nrm-amfset, (urn:3gpp:sa5:_3gpp-nr-nrm-eutranfreqrelation?revision=2019-10-28)_3gpp-nr-nrm-eutranfreqrelation, (http://tail-f.com/yang/common?revision=2017-03-08)tailf-meta-extensions, (urn:3gpp:sa5:_3gpp-5gc-nrm-upffunction?revision=2020-11-05)_3gpp-5gc-nrm-upffunction, (urn:3gpp:sa5:_3gpp-nr-nrm-dpciconfigurationfunction?revision=2021-08-05)_3gpp-nr-nrm-dpciconfigurationfunction, (urn:3gpp:sa5:_3gpp-5gc-nrm-ngeirfunction?revision=2020-11-05)_3gpp-5gc-nrm-ngeirfunction, (urn:ietf:params:xml:ns:yang:ietf-yang-schema-mount?revision=2019-01-14)ietf-yang-schema-mount, (urn:3gpp:sa5:_3gpp-nr-nrm-nrfreqrelation?revision=2020-04-23)_3gpp-nr-nrm-nrfreqrelation, (urn:3gpp:sa5:_3gpp-5gc-nrm-nssffunction?revision=2020-11-05)_3gpp-5gc-nrm-nssffunction, (urn:3gpp:sa5:_3gpp-nr-nrm-gnbdufunction?revision=2021-04-30)_3gpp-nr-nrm-gnbdufunction, (urn:3gpp:sa5:_3gpp-5gc-nrm-lmffunction?revision=2019-10-25)_3gpp-5gc-nrm-lmffunction, (urn:3gpp:sa5:_3gpp-5gc-nrm-externalnssffunction?revision=2019-10-28)_3gpp-5gc-nrm-externalnssffunction]
+ WARN [default-pool-5-1] (DeviceSourcesResolver.java:74) - RemoteDevice{lighty16-1}: Adding provided but not required sources as required to prevent failures
+ INFO [nioEventLoopGroup-3-1] (StreamWriterFacade.java:307) - Encountered annotation message-id not bound to module. Please examine the call stack and fix this warning by defining a proper YANG annotation to cover it
+java.lang.Throwable: Call stack
+        at org.opendaylight.yangtools.yang.data.codec.xml.StreamWriterFacade.warnLegacyAttribute(StreamWriterFacade.java:307)
+        at org.opendaylight.yangtools.yang.data.codec.xml.XmlParserStream.getElementAttributes(XmlParserStream.java:399)
+        at org.opendaylight.yangtools.yang.data.codec.xml.XmlParserStream.read(XmlParserStream.java:472)
+        at org.opendaylight.yangtools.yang.data.codec.xml.XmlParserStream.parse(XmlParserStream.java:354)
+        at org.opendaylight.yangtools.yang.data.codec.xml.XmlParserStream.traverse(XmlParserStream.java:381)
+        at org.opendaylight.netconf.sal.connect.netconf.schema.mapping.NetconfMessageTransformer.parseResult(NetconfMessageTransformer.java:481)
+        at org.opendaylight.netconf.sal.connect.netconf.schema.mapping.NetconfMessageTransformer.toRpcResult(NetconfMessageTransformer.java:433)
+        at org.opendaylight.netconf.sal.connect.netconf.schema.mapping.NetconfMessageTransformer.toRpcResult(NetconfMessageTransformer.java:103)
+        at org.opendaylight.netconf.sal.connect.netconf.sal.NetconfDeviceRpc$1.onSuccess(NetconfDeviceRpc.java:62)
+        at org.opendaylight.netconf.sal.connect.netconf.sal.NetconfDeviceRpc$1.onSuccess(NetconfDeviceRpc.java:58)
+        at com.google.common.util.concurrent.Futures$CallbackListener.run(Futures.java:1138)
+        at com.google.common.util.concurrent.DirectExecutor.execute(DirectExecutor.java:31)
+        at com.google.common.util.concurrent.AbstractFuture.executeListener(AbstractFuture.java:1270)
+        at com.google.common.util.concurrent.AbstractFuture.complete(AbstractFuture.java:1038)
+        at com.google.common.util.concurrent.AbstractFuture.set(AbstractFuture.java:783)
+        at org.opendaylight.netconf.sal.connect.netconf.listener.UncancellableFuture.set(UncancellableFuture.java:45)
+        at org.opendaylight.netconf.sal.connect.netconf.listener.NetconfDeviceCommunicator.processMessage(NetconfDeviceCommunicator.java:352)
+        at org.opendaylight.netconf.sal.connect.netconf.listener.NetconfDeviceCommunicator.onMessage(NetconfDeviceCommunicator.java:282)
+        at org.opendaylight.netconf.sal.connect.netconf.listener.NetconfDeviceCommunicator.onMessage(NetconfDeviceCommunicator.java:50)
+        at org.opendaylight.netconf.nettyutil.AbstractNetconfSession.handleMessage(AbstractNetconfSession.java:65)
+        at org.opendaylight.netconf.nettyutil.AbstractNetconfSession.channelRead0(AbstractNetconfSession.java:186)
+        at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:99)
+        at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+        at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+        at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+        at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:327)
+        at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:299)
+        at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+        at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+        at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+        at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:327)
+        at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:299)
+        at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+        at io.netty.channel.AbstractChannelHandlerContext.access$600(AbstractChannelHandlerContext.java:61)
+        at io.netty.channel.AbstractChannelHandlerContext$7.run(AbstractChannelHandlerContext.java:370)
+        at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+        at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:469)
+        at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:503)
+        at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+        at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+ WARN [default-pool-5-1] (BuildGlobalContext.java:232) - Unexpected error processing source RevisionSourceIdentifier [name=_3gpp-ns-nrm-networkslice@2020-06-02]. Please file an issue with this model attached.
+com.google.common.base.VerifyException: expected a non-null reference
+        at com.google.common.base.Verify.verifyNotNull(Verify.java:503)
+        at com.google.common.base.Verify.verifyNotNull(Verify.java:479)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.AbstractResumedStatement.mutableDeclaredSubstatements(AbstractResumedStatement.java:64)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.RootStatementContext.mutableDeclaredSubstatements(RootStatementContext.java:49)
+        at org.opendaylight.yangtools.yang.parser.spi.meta.StmtContext$Mutable.declaredSubstatements(StmtContext.java:236)
+        at org.opendaylight.yangtools.yang.parser.spi.meta.StmtContextUtils.getRootModuleQName(StmtContextUtils.java:560)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.InferredStatementContext.requestSchemaTreeChild(InferredStatementContext.java:439)
+        at org.opendaylight.yangtools.yang.parser.spi.SchemaTreeNamespace.requestFrom(SchemaTreeNamespace.java:75)
+        at org.opendaylight.yangtools.yang.parser.spi.SchemaTreeNamespace.getFrom(SchemaTreeNamespace.java:69)
+        at org.opendaylight.yangtools.yang.parser.spi.SchemaTreeNamespace.getFrom(SchemaTreeNamespace.java:37)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.NamespaceBehaviourWithListeners.getFrom(NamespaceBehaviourWithListeners.java:112)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ReactorStmtCtx.namespaceItem(ReactorStmtCtx.java:330)
+        at org.opendaylight.yangtools.yang.parser.spi.meta.NamespaceStmtCtx.getFromNamespace(NamespaceStmtCtx.java:90)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.StatementContextBase.onNamespaceItemAddedAction(StatementContextBase.java:611)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ModifierImpl$AbstractPathPrerequisite.hookOnto(ModifierImpl.java:378)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ModifierImpl$AbstractPathPrerequisite.hookOnto(ModifierImpl.java:373)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ModifierImpl.lambda$requiresCtxPath$1(ModifierImpl.java:190)
+        at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ModifierImpl.apply(ModifierImpl.java:274)
+        at org.opendaylight.yangtools.yang.parser.rfc7950.stmt.meta.UniqueStatementSupport$RequireEffectiveList.apply(UniqueStatementSupport.java:152)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ModifierImpl.tryApply(ModifierImpl.java:147)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ModifierImpl$PhaseFinished.phaseFinished(ModifierImpl.java:401)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.StatementContextBase.addPhaseCompletedListener(StatementContextBase.java:699)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ModifierImpl.lambda$requiresCtxImpl$0(ModifierImpl.java:119)
+        at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ModifierImpl.apply(ModifierImpl.java:274)
+        at org.opendaylight.yangtools.yang.parser.rfc7950.stmt.meta.UniqueStatementSupport.onStatementAdded(UniqueStatementSupport.java:93)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.StatementDefinitionContext.onStatementAdded(StatementDefinitionContext.java:67)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ReactorStmtCtx.replicaAsChildOf(ReactorStmtCtx.java:370)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.StatementContextBase.copyAsChildOfImpl(StatementContextBase.java:755)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.StatementContextBase.copyAsChildOf(StatementContextBase.java:743)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.InferredStatementContext.copySubstatement(InferredStatementContext.java:597)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.InferredStatementContext.copySubstatement(InferredStatementContext.java:586)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.InferredStatementContext.initializeSubstatements(InferredStatementContext.java:551)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.InferredStatementContext.ensureEffectiveSubstatements(InferredStatementContext.java:479)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.InferredStatementContext.streamEffective(InferredStatementContext.java:504)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.InferredStatementContext.createInferredEffective(InferredStatementContext.java:223)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.InferredStatementContext.tryToReuseSubstatements(InferredStatementContext.java:307)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.InferredStatementContext.tryToReusePrototype(InferredStatementContext.java:240)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.InferredStatementContext.createEffective(InferredStatementContext.java:219)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.StatementContextBase.createEffective(StatementContextBase.java:439)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ReactorStmtCtx.loadEffective(ReactorStmtCtx.java:389)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ReactorStmtCtx.buildEffective(ReactorStmtCtx.java:385)
+        at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+        at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
+        at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+        at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+        at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+        at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+        at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+        at org.opendaylight.yangtools.yang.parser.spi.meta.AbstractStatementSupport.buildEffectiveSubstatements(AbstractStatementSupport.java:139)
+        at org.opendaylight.yangtools.yang.parser.spi.meta.AbstractStatementSupport.createEffective(AbstractStatementSupport.java:83)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.AbstractResumedStatement.createEffective(AbstractResumedStatement.java:124)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.AbstractResumedStatement.createEffective(AbstractResumedStatement.java:109)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.StatementContextBase.createEffective(StatementContextBase.java:439)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ReactorStmtCtx.loadEffective(ReactorStmtCtx.java:389)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ReactorStmtCtx.buildEffective(ReactorStmtCtx.java:385)
+        at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+        at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
+        at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+        at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+        at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+        at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+        at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+        at org.opendaylight.yangtools.yang.parser.spi.meta.AbstractStatementSupport.buildEffectiveSubstatements(AbstractStatementSupport.java:139)
+        at org.opendaylight.yangtools.yang.parser.spi.meta.AbstractStatementSupport.createEffective(AbstractStatementSupport.java:83)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.AbstractResumedStatement.createEffective(AbstractResumedStatement.java:124)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.AbstractResumedStatement.createEffective(AbstractResumedStatement.java:109)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.StatementContextBase.createEffective(StatementContextBase.java:439)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ReactorStmtCtx.loadEffective(ReactorStmtCtx.java:389)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ReactorStmtCtx.buildEffective(ReactorStmtCtx.java:385)
+        at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+        at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
+        at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+        at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+        at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+        at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+        at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+        at org.opendaylight.yangtools.yang.parser.spi.meta.AbstractStatementSupport.buildEffectiveSubstatements(AbstractStatementSupport.java:139)
+        at org.opendaylight.yangtools.yang.parser.rfc7950.stmt.module.ModuleStatementSupport.buildEffectiveSubstatements(ModuleStatementSupport.java:227)
+        at org.opendaylight.yangtools.yang.parser.spi.meta.AbstractStatementSupport.createEffective(AbstractStatementSupport.java:83)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.AbstractResumedStatement.createEffective(AbstractResumedStatement.java:124)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.AbstractResumedStatement.createEffective(AbstractResumedStatement.java:109)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.StatementContextBase.createEffective(StatementContextBase.java:439)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ReactorStmtCtx.loadEffective(ReactorStmtCtx.java:389)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ReactorStmtCtx.buildEffective(ReactorStmtCtx.java:385)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.BuildGlobalContext.transformEffective(BuildGlobalContext.java:261)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.BuildGlobalContext.buildEffective(BuildGlobalContext.java:211)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.CrossSourceStatementReactor$BuildAction.buildEffective(CrossSourceStatementReactor.java:224)
+        at org.opendaylight.yangtools.yang.parser.impl.DefaultYangParser.buildEffectiveModel(DefaultYangParser.java:96)
+        at org.opendaylight.yangtools.yang.parser.repo.AssembleSources.apply(AssembleSources.java:91)
+        at org.opendaylight.yangtools.yang.parser.repo.AssembleSources.apply(AssembleSources.java:38)
+        at com.google.common.util.concurrent.AbstractTransformFuture$AsyncTransformFuture.doTransform(AbstractTransformFuture.java:221)
+        at com.google.common.util.concurrent.AbstractTransformFuture$AsyncTransformFuture.doTransform(AbstractTransformFuture.java:208)
+        at com.google.common.util.concurrent.AbstractTransformFuture.run(AbstractTransformFuture.java:122)
+        at com.google.common.util.concurrent.DirectExecutor.execute(DirectExecutor.java:31)
+        at com.google.common.util.concurrent.AbstractFuture.executeListener(AbstractFuture.java:1270)
+        at com.google.common.util.concurrent.AbstractFuture.addListener(AbstractFuture.java:761)
+        at com.google.common.util.concurrent.FluentFuture$TrustedFuture.addListener(FluentFuture.java:114)
+        at com.google.common.util.concurrent.AbstractTransformFuture.create(AbstractTransformFuture.java:43)
+        at com.google.common.util.concurrent.Futures.transformAsync(Futures.java:456)
+        at org.opendaylight.yangtools.yang.parser.repo.SharedEffectiveModelContextFactory.resolveEntry(SharedEffectiveModelContextFactory.java:194)
+        at org.opendaylight.yangtools.yang.parser.repo.SharedEffectiveModelContextFactory.computeModel(SharedEffectiveModelContextFactory.java:176)
+        at org.opendaylight.yangtools.yang.parser.repo.SharedEffectiveModelContextFactory.createEffectiveModel(SharedEffectiveModelContextFactory.java:134)
+        at org.opendaylight.yangtools.yang.parser.repo.SharedEffectiveModelContextFactory.createEffectiveModelContext(SharedEffectiveModelContextFactory.java:129)
+        at org.opendaylight.netconf.sal.connect.netconf.NetconfDevice$SchemaSetup.trySetupSchema(NetconfDevice.java:510)
+        at org.opendaylight.netconf.sal.connect.netconf.NetconfDevice$SchemaSetup.startResolution(NetconfDevice.java:463)
+        at org.opendaylight.netconf.sal.connect.netconf.NetconfDevice.assembleSchemaContext(NetconfDevice.java:304)
+        at org.opendaylight.netconf.sal.connect.netconf.NetconfDevice.lambda$onRemoteSessionUp$0(NetconfDevice.java:175)
+        at com.google.common.util.concurrent.AbstractTransformFuture$AsyncTransformFuture.doTransform(AbstractTransformFuture.java:221)
+        at com.google.common.util.concurrent.AbstractTransformFuture$AsyncTransformFuture.doTransform(AbstractTransformFuture.java:208)
+        at com.google.common.util.concurrent.AbstractTransformFuture.run(AbstractTransformFuture.java:122)
+        at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+        at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+        at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+ WARN [default-pool-5-1] (NetconfDevice.java:554) - RemoteDevice{lighty16-1}: Unable to build schema context, failed to resolve source RevisionSourceIdentifier [name=_3gpp-ns-nrm-networkslice@2020-06-02], will reattempt without it
+ WARN [default-pool-5-1] (NetconfDevice.java:556) - RemoteDevice{lighty16-1}: Unable to build schema context, failed to resolve source RevisionSourceIdentifier [name=_3gpp-ns-nrm-networkslice@2020-06-02], will reattempt without it
+SchemaResolutionException{unsatisfiedImports={}}
+        at org.opendaylight.yangtools.yang.parser.repo.AssembleSources.apply(AssembleSources.java:96)
+        at org.opendaylight.yangtools.yang.parser.repo.AssembleSources.apply(AssembleSources.java:38)
+        at com.google.common.util.concurrent.AbstractTransformFuture$AsyncTransformFuture.doTransform(AbstractTransformFuture.java:221)
+        at com.google.common.util.concurrent.AbstractTransformFuture$AsyncTransformFuture.doTransform(AbstractTransformFuture.java:208)
+        at com.google.common.util.concurrent.AbstractTransformFuture.run(AbstractTransformFuture.java:122)
+        at com.google.common.util.concurrent.DirectExecutor.execute(DirectExecutor.java:31)
+        at com.google.common.util.concurrent.AbstractFuture.executeListener(AbstractFuture.java:1270)
+        at com.google.common.util.concurrent.AbstractFuture.addListener(AbstractFuture.java:761)
+        at com.google.common.util.concurrent.FluentFuture$TrustedFuture.addListener(FluentFuture.java:114)
+        at com.google.common.util.concurrent.AbstractTransformFuture.create(AbstractTransformFuture.java:43)
+        at com.google.common.util.concurrent.Futures.transformAsync(Futures.java:456)
+        at org.opendaylight.yangtools.yang.parser.repo.SharedEffectiveModelContextFactory.resolveEntry(SharedEffectiveModelContextFactory.java:194)
+        at org.opendaylight.yangtools.yang.parser.repo.SharedEffectiveModelContextFactory.computeModel(SharedEffectiveModelContextFactory.java:176)
+        at org.opendaylight.yangtools.yang.parser.repo.SharedEffectiveModelContextFactory.createEffectiveModel(SharedEffectiveModelContextFactory.java:134)
+        at org.opendaylight.yangtools.yang.parser.repo.SharedEffectiveModelContextFactory.createEffectiveModelContext(SharedEffectiveModelContextFactory.java:129)
+        at org.opendaylight.netconf.sal.connect.netconf.NetconfDevice$SchemaSetup.trySetupSchema(NetconfDevice.java:510)
+        at org.opendaylight.netconf.sal.connect.netconf.NetconfDevice$SchemaSetup.startResolution(NetconfDevice.java:463)
+        at org.opendaylight.netconf.sal.connect.netconf.NetconfDevice.assembleSchemaContext(NetconfDevice.java:304)
+        at org.opendaylight.netconf.sal.connect.netconf.NetconfDevice.lambda$onRemoteSessionUp$0(NetconfDevice.java:175)
+        at com.google.common.util.concurrent.AbstractTransformFuture$AsyncTransformFuture.doTransform(AbstractTransformFuture.java:221)
+        at com.google.common.util.concurrent.AbstractTransformFuture$AsyncTransformFuture.doTransform(AbstractTransformFuture.java:208)
+        at com.google.common.util.concurrent.AbstractTransformFuture.run(AbstractTransformFuture.java:122)
+        at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+        at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+        at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.opendaylight.yangtools.yang.parser.api.YangParserException: Failed to assemble sources
+        at org.opendaylight.yangtools.yang.parser.impl.DefaultYangParser.decodeReactorException(DefaultYangParser.java:104)
+        at org.opendaylight.yangtools.yang.parser.impl.DefaultYangParser.buildEffectiveModel(DefaultYangParser.java:98)
+        at org.opendaylight.yangtools.yang.parser.repo.AssembleSources.apply(AssembleSources.java:91)
+        ... 25 more
+Caused by: org.opendaylight.yangtools.yang.parser.spi.meta.SomeModifiersUnresolvedException: Some of EFFECTIVE_MODEL modifiers for statements were not resolved.
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.BuildGlobalContext.propagateException(BuildGlobalContext.java:236)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.BuildGlobalContext.transformEffective(BuildGlobalContext.java:263)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.BuildGlobalContext.buildEffective(BuildGlobalContext.java:211)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.CrossSourceStatementReactor$BuildAction.buildEffective(CrossSourceStatementReactor.java:224)
+        at org.opendaylight.yangtools.yang.parser.impl.DefaultYangParser.buildEffectiveModel(DefaultYangParser.java:96)
+        ... 26 more
+Caused by: com.google.common.base.VerifyException: expected a non-null reference
+        at com.google.common.base.Verify.verifyNotNull(Verify.java:503)
+        at com.google.common.base.Verify.verifyNotNull(Verify.java:479)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.AbstractResumedStatement.mutableDeclaredSubstatements(AbstractResumedStatement.java:64)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.RootStatementContext.mutableDeclaredSubstatements(RootStatementContext.java:49)
+        at org.opendaylight.yangtools.yang.parser.spi.meta.StmtContext$Mutable.declaredSubstatements(StmtContext.java:236)
+        at org.opendaylight.yangtools.yang.parser.spi.meta.StmtContextUtils.getRootModuleQName(StmtContextUtils.java:560)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.InferredStatementContext.requestSchemaTreeChild(InferredStatementContext.java:439)
+        at org.opendaylight.yangtools.yang.parser.spi.SchemaTreeNamespace.requestFrom(SchemaTreeNamespace.java:75)
+        at org.opendaylight.yangtools.yang.parser.spi.SchemaTreeNamespace.getFrom(SchemaTreeNamespace.java:69)
+        at org.opendaylight.yangtools.yang.parser.spi.SchemaTreeNamespace.getFrom(SchemaTreeNamespace.java:37)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.NamespaceBehaviourWithListeners.getFrom(NamespaceBehaviourWithListeners.java:112)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ReactorStmtCtx.namespaceItem(ReactorStmtCtx.java:330)
+        at org.opendaylight.yangtools.yang.parser.spi.meta.NamespaceStmtCtx.getFromNamespace(NamespaceStmtCtx.java:90)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.StatementContextBase.onNamespaceItemAddedAction(StatementContextBase.java:611)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ModifierImpl$AbstractPathPrerequisite.hookOnto(ModifierImpl.java:378)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ModifierImpl$AbstractPathPrerequisite.hookOnto(ModifierImpl.java:373)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ModifierImpl.lambda$requiresCtxPath$1(ModifierImpl.java:190)
+        at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ModifierImpl.apply(ModifierImpl.java:274)
+        at org.opendaylight.yangtools.yang.parser.rfc7950.stmt.meta.UniqueStatementSupport$RequireEffectiveList.apply(UniqueStatementSupport.java:152)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ModifierImpl.tryApply(ModifierImpl.java:147)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ModifierImpl$PhaseFinished.phaseFinished(ModifierImpl.java:401)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.StatementContextBase.addPhaseCompletedListener(StatementContextBase.java:699)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ModifierImpl.lambda$requiresCtxImpl$0(ModifierImpl.java:119)
+        at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ModifierImpl.apply(ModifierImpl.java:274)
+        at org.opendaylight.yangtools.yang.parser.rfc7950.stmt.meta.UniqueStatementSupport.onStatementAdded(UniqueStatementSupport.java:93)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.StatementDefinitionContext.onStatementAdded(StatementDefinitionContext.java:67)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ReactorStmtCtx.replicaAsChildOf(ReactorStmtCtx.java:370)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.StatementContextBase.copyAsChildOfImpl(StatementContextBase.java:755)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.StatementContextBase.copyAsChildOf(StatementContextBase.java:743)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.InferredStatementContext.copySubstatement(InferredStatementContext.java:597)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.InferredStatementContext.copySubstatement(InferredStatementContext.java:586)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.InferredStatementContext.initializeSubstatements(InferredStatementContext.java:551)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.InferredStatementContext.ensureEffectiveSubstatements(InferredStatementContext.java:479)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.InferredStatementContext.streamEffective(InferredStatementContext.java:504)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.InferredStatementContext.createInferredEffective(InferredStatementContext.java:223)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.InferredStatementContext.tryToReuseSubstatements(InferredStatementContext.java:307)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.InferredStatementContext.tryToReusePrototype(InferredStatementContext.java:240)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.InferredStatementContext.createEffective(InferredStatementContext.java:219)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.StatementContextBase.createEffective(StatementContextBase.java:439)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ReactorStmtCtx.loadEffective(ReactorStmtCtx.java:389)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ReactorStmtCtx.buildEffective(ReactorStmtCtx.java:385)
+        at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+        at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
+        at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+        at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+        at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+        at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+        at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+        at org.opendaylight.yangtools.yang.parser.spi.meta.AbstractStatementSupport.buildEffectiveSubstatements(AbstractStatementSupport.java:139)
+        at org.opendaylight.yangtools.yang.parser.spi.meta.AbstractStatementSupport.createEffective(AbstractStatementSupport.java:83)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.AbstractResumedStatement.createEffective(AbstractResumedStatement.java:124)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.AbstractResumedStatement.createEffective(AbstractResumedStatement.java:109)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.StatementContextBase.createEffective(StatementContextBase.java:439)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ReactorStmtCtx.loadEffective(ReactorStmtCtx.java:389)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ReactorStmtCtx.buildEffective(ReactorStmtCtx.java:385)
+        at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+        at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
+        at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+        at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+        at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+        at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+        at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+        at org.opendaylight.yangtools.yang.parser.spi.meta.AbstractStatementSupport.buildEffectiveSubstatements(AbstractStatementSupport.java:139)
+        at org.opendaylight.yangtools.yang.parser.spi.meta.AbstractStatementSupport.createEffective(AbstractStatementSupport.java:83)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.AbstractResumedStatement.createEffective(AbstractResumedStatement.java:124)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.AbstractResumedStatement.createEffective(AbstractResumedStatement.java:109)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.StatementContextBase.createEffective(StatementContextBase.java:439)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ReactorStmtCtx.loadEffective(ReactorStmtCtx.java:389)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ReactorStmtCtx.buildEffective(ReactorStmtCtx.java:385)
+        at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+        at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
+        at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+        at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+        at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+        at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+        at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+        at org.opendaylight.yangtools.yang.parser.spi.meta.AbstractStatementSupport.buildEffectiveSubstatements(AbstractStatementSupport.java:139)
+        at org.opendaylight.yangtools.yang.parser.rfc7950.stmt.module.ModuleStatementSupport.buildEffectiveSubstatements(ModuleStatementSupport.java:227)
+        at org.opendaylight.yangtools.yang.parser.spi.meta.AbstractStatementSupport.createEffective(AbstractStatementSupport.java:83)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.AbstractResumedStatement.createEffective(AbstractResumedStatement.java:124)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.AbstractResumedStatement.createEffective(AbstractResumedStatement.java:109)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.StatementContextBase.createEffective(StatementContextBase.java:439)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ReactorStmtCtx.loadEffective(ReactorStmtCtx.java:389)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ReactorStmtCtx.buildEffective(ReactorStmtCtx.java:385)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.BuildGlobalContext.transformEffective(BuildGlobalContext.java:261)
+        ... 29 more
+ WARN [default-pool-5-1] (NetconfDevice.java:567) - RemoteDevice{lighty16-1}: Unable to build schema context, unsatisfied imports {}, will reattempt with resolved only
+ WARN [default-pool-5-1] (BuildGlobalContext.java:232) - Unexpected error processing source RevisionSourceIdentifier [name=_3gpp-ns-nrm-networkslicesubnet@2021-05-05]. Please file an issue with this model attached.
+com.google.common.base.VerifyException: expected a non-null reference
+        at com.google.common.base.Verify.verifyNotNull(Verify.java:503)
+        at com.google.common.base.Verify.verifyNotNull(Verify.java:479)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.AbstractResumedStatement.mutableDeclaredSubstatements(AbstractResumedStatement.java:64)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.RootStatementContext.mutableDeclaredSubstatements(RootStatementContext.java:49)
+        at org.opendaylight.yangtools.yang.parser.spi.meta.StmtContext$Mutable.declaredSubstatements(StmtContext.java:236)
+        at org.opendaylight.yangtools.yang.parser.spi.meta.StmtContextUtils.getRootModuleQName(StmtContextUtils.java:560)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.InferredStatementContext.requestSchemaTreeChild(InferredStatementContext.java:439)
+        at org.opendaylight.yangtools.yang.parser.spi.SchemaTreeNamespace.requestFrom(SchemaTreeNamespace.java:75)
+        at org.opendaylight.yangtools.yang.parser.spi.SchemaTreeNamespace.getFrom(SchemaTreeNamespace.java:69)
+        at org.opendaylight.yangtools.yang.parser.spi.SchemaTreeNamespace.getFrom(SchemaTreeNamespace.java:37)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.NamespaceBehaviourWithListeners.getFrom(NamespaceBehaviourWithListeners.java:112)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ReactorStmtCtx.namespaceItem(ReactorStmtCtx.java:330)
+        at org.opendaylight.yangtools.yang.parser.spi.meta.NamespaceStmtCtx.getFromNamespace(NamespaceStmtCtx.java:90)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.StatementContextBase.onNamespaceItemAddedAction(StatementContextBase.java:611)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ModifierImpl$AbstractPathPrerequisite.hookOnto(ModifierImpl.java:378)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ModifierImpl$AbstractPathPrerequisite.hookOnto(ModifierImpl.java:373)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ModifierImpl.lambda$requiresCtxPath$1(ModifierImpl.java:190)
+        at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ModifierImpl.apply(ModifierImpl.java:274)
+        at org.opendaylight.yangtools.yang.parser.rfc7950.stmt.meta.UniqueStatementSupport$RequireEffectiveList.apply(UniqueStatementSupport.java:152)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ModifierImpl.tryApply(ModifierImpl.java:147)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ModifierImpl$PhaseFinished.phaseFinished(ModifierImpl.java:401)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.StatementContextBase.addPhaseCompletedListener(StatementContextBase.java:699)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ModifierImpl.lambda$requiresCtxImpl$0(ModifierImpl.java:119)
+        at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ModifierImpl.apply(ModifierImpl.java:274)
+        at org.opendaylight.yangtools.yang.parser.rfc7950.stmt.meta.UniqueStatementSupport.onStatementAdded(UniqueStatementSupport.java:93)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.StatementDefinitionContext.onStatementAdded(StatementDefinitionContext.java:67)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ReactorStmtCtx.replicaAsChildOf(ReactorStmtCtx.java:370)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.StatementContextBase.copyAsChildOfImpl(StatementContextBase.java:755)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.StatementContextBase.copyAsChildOf(StatementContextBase.java:743)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.InferredStatementContext.copySubstatement(InferredStatementContext.java:597)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.InferredStatementContext.copySubstatement(InferredStatementContext.java:586)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.InferredStatementContext.initializeSubstatements(InferredStatementContext.java:551)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.InferredStatementContext.ensureEffectiveSubstatements(InferredStatementContext.java:479)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.InferredStatementContext.streamEffective(InferredStatementContext.java:504)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.InferredStatementContext.createInferredEffective(InferredStatementContext.java:223)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.InferredStatementContext.tryToReuseSubstatements(InferredStatementContext.java:307)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.InferredStatementContext.tryToReusePrototype(InferredStatementContext.java:240)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.InferredStatementContext.createEffective(InferredStatementContext.java:219)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.StatementContextBase.createEffective(StatementContextBase.java:439)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ReactorStmtCtx.loadEffective(ReactorStmtCtx.java:389)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ReactorStmtCtx.buildEffective(ReactorStmtCtx.java:385)
+        at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+        at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
+        at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+        at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+        at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+        at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+        at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+        at org.opendaylight.yangtools.yang.parser.spi.meta.AbstractStatementSupport.buildEffectiveSubstatements(AbstractStatementSupport.java:139)
+        at org.opendaylight.yangtools.yang.parser.spi.meta.AbstractStatementSupport.createEffective(AbstractStatementSupport.java:83)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.AbstractResumedStatement.createEffective(AbstractResumedStatement.java:124)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.AbstractResumedStatement.createEffective(AbstractResumedStatement.java:109)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.StatementContextBase.createEffective(StatementContextBase.java:439)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ReactorStmtCtx.loadEffective(ReactorStmtCtx.java:389)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ReactorStmtCtx.buildEffective(ReactorStmtCtx.java:385)
+        at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+        at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
+        at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+        at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+        at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+        at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+        at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+        at org.opendaylight.yangtools.yang.parser.spi.meta.AbstractStatementSupport.buildEffectiveSubstatements(AbstractStatementSupport.java:139)
+        at org.opendaylight.yangtools.yang.parser.spi.meta.AbstractStatementSupport.createEffective(AbstractStatementSupport.java:83)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.AbstractResumedStatement.createEffective(AbstractResumedStatement.java:124)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.AbstractResumedStatement.createEffective(AbstractResumedStatement.java:109)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.StatementContextBase.createEffective(StatementContextBase.java:439)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ReactorStmtCtx.loadEffective(ReactorStmtCtx.java:389)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ReactorStmtCtx.buildEffective(ReactorStmtCtx.java:385)
+        at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+        at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
+        at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+        at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+        at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+        at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+        at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+        at org.opendaylight.yangtools.yang.parser.spi.meta.AbstractStatementSupport.buildEffectiveSubstatements(AbstractStatementSupport.java:139)
+        at org.opendaylight.yangtools.yang.parser.rfc7950.stmt.module.ModuleStatementSupport.buildEffectiveSubstatements(ModuleStatementSupport.java:227)
+        at org.opendaylight.yangtools.yang.parser.spi.meta.AbstractStatementSupport.createEffective(AbstractStatementSupport.java:83)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.AbstractResumedStatement.createEffective(AbstractResumedStatement.java:124)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.AbstractResumedStatement.createEffective(AbstractResumedStatement.java:109)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.StatementContextBase.createEffective(StatementContextBase.java:439)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ReactorStmtCtx.loadEffective(ReactorStmtCtx.java:389)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ReactorStmtCtx.buildEffective(ReactorStmtCtx.java:385)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.BuildGlobalContext.transformEffective(BuildGlobalContext.java:261)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.BuildGlobalContext.buildEffective(BuildGlobalContext.java:211)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.CrossSourceStatementReactor$BuildAction.buildEffective(CrossSourceStatementReactor.java:224)
+        at org.opendaylight.yangtools.yang.parser.impl.DefaultYangParser.buildEffectiveModel(DefaultYangParser.java:96)
+        at org.opendaylight.yangtools.yang.parser.repo.AssembleSources.apply(AssembleSources.java:91)
+        at org.opendaylight.yangtools.yang.parser.repo.AssembleSources.apply(AssembleSources.java:38)
+        at com.google.common.util.concurrent.AbstractTransformFuture$AsyncTransformFuture.doTransform(AbstractTransformFuture.java:221)
+        at com.google.common.util.concurrent.AbstractTransformFuture$AsyncTransformFuture.doTransform(AbstractTransformFuture.java:208)
+        at com.google.common.util.concurrent.AbstractTransformFuture.run(AbstractTransformFuture.java:122)
+        at com.google.common.util.concurrent.DirectExecutor.execute(DirectExecutor.java:31)
+        at com.google.common.util.concurrent.AbstractFuture.executeListener(AbstractFuture.java:1270)
+        at com.google.common.util.concurrent.AbstractFuture.addListener(AbstractFuture.java:761)
+        at com.google.common.util.concurrent.FluentFuture$TrustedFuture.addListener(FluentFuture.java:114)
+        at com.google.common.util.concurrent.AbstractTransformFuture.create(AbstractTransformFuture.java:43)
+        at com.google.common.util.concurrent.Futures.transformAsync(Futures.java:456)
+        at org.opendaylight.yangtools.yang.parser.repo.SharedEffectiveModelContextFactory.resolveEntry(SharedEffectiveModelContextFactory.java:194)
+        at org.opendaylight.yangtools.yang.parser.repo.SharedEffectiveModelContextFactory.computeModel(SharedEffectiveModelContextFactory.java:176)
+        at org.opendaylight.yangtools.yang.parser.repo.SharedEffectiveModelContextFactory.createEffectiveModel(SharedEffectiveModelContextFactory.java:134)
+        at org.opendaylight.yangtools.yang.parser.repo.SharedEffectiveModelContextFactory.createEffectiveModelContext(SharedEffectiveModelContextFactory.java:129)
+        at org.opendaylight.netconf.sal.connect.netconf.NetconfDevice$SchemaSetup.trySetupSchema(NetconfDevice.java:510)
+        at org.opendaylight.netconf.sal.connect.netconf.NetconfDevice$SchemaSetup.onFailure(NetconfDevice.java:503)
+        at com.google.common.util.concurrent.Futures$CallbackListener.run(Futures.java:1124)
+        at com.google.common.util.concurrent.DirectExecutor.execute(DirectExecutor.java:31)
+        at com.google.common.util.concurrent.AbstractFuture.executeListener(AbstractFuture.java:1270)
+        at com.google.common.util.concurrent.AbstractFuture.addListener(AbstractFuture.java:761)
+        at com.google.common.util.concurrent.AbstractFuture$TrustedFuture.addListener(AbstractFuture.java:136)
+        at com.google.common.util.concurrent.Futures.addCallback(Futures.java:1105)
+        at org.opendaylight.netconf.sal.connect.netconf.NetconfDevice$SchemaSetup.trySetupSchema(NetconfDevice.java:510)
+        at org.opendaylight.netconf.sal.connect.netconf.NetconfDevice$SchemaSetup.onFailure(NetconfDevice.java:503)
+        at com.google.common.util.concurrent.Futures$CallbackListener.run(Futures.java:1124)
+        at com.google.common.util.concurrent.DirectExecutor.execute(DirectExecutor.java:31)
+        at com.google.common.util.concurrent.AbstractFuture.executeListener(AbstractFuture.java:1270)
+        at com.google.common.util.concurrent.AbstractFuture.addListener(AbstractFuture.java:761)
+        at com.google.common.util.concurrent.AbstractFuture$TrustedFuture.addListener(AbstractFuture.java:136)
+        at com.google.common.util.concurrent.Futures.addCallback(Futures.java:1105)
+        at org.opendaylight.netconf.sal.connect.netconf.NetconfDevice$SchemaSetup.trySetupSchema(NetconfDevice.java:510)
+        at org.opendaylight.netconf.sal.connect.netconf.NetconfDevice$SchemaSetup.startResolution(NetconfDevice.java:463)
+        at org.opendaylight.netconf.sal.connect.netconf.NetconfDevice.assembleSchemaContext(NetconfDevice.java:304)
+        at org.opendaylight.netconf.sal.connect.netconf.NetconfDevice.lambda$onRemoteSessionUp$0(NetconfDevice.java:175)
+        at com.google.common.util.concurrent.AbstractTransformFuture$AsyncTransformFuture.doTransform(AbstractTransformFuture.java:221)
+        at com.google.common.util.concurrent.AbstractTransformFuture$AsyncTransformFuture.doTransform(AbstractTransformFuture.java:208)
+        at com.google.common.util.concurrent.AbstractTransformFuture.run(AbstractTransformFuture.java:122)
+        at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+        at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+        at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+ WARN [default-pool-5-1] (NetconfDevice.java:554) - RemoteDevice{lighty16-1}: Unable to build schema context, failed to resolve source RevisionSourceIdentifier [name=_3gpp-ns-nrm-networkslicesubnet@2021-05-05], will reattempt without it
+ WARN [default-pool-5-1] (NetconfDevice.java:556) - RemoteDevice{lighty16-1}: Unable to build schema context, failed to resolve source RevisionSourceIdentifier [name=_3gpp-ns-nrm-networkslicesubnet@2021-05-05], will reattempt without it
+SchemaResolutionException{unsatisfiedImports={}}
+        at org.opendaylight.yangtools.yang.parser.repo.AssembleSources.apply(AssembleSources.java:96)
+        at org.opendaylight.yangtools.yang.parser.repo.AssembleSources.apply(AssembleSources.java:38)
+        at com.google.common.util.concurrent.AbstractTransformFuture$AsyncTransformFuture.doTransform(AbstractTransformFuture.java:221)
+        at com.google.common.util.concurrent.AbstractTransformFuture$AsyncTransformFuture.doTransform(AbstractTransformFuture.java:208)
+        at com.google.common.util.concurrent.AbstractTransformFuture.run(AbstractTransformFuture.java:122)
+        at com.google.common.util.concurrent.DirectExecutor.execute(DirectExecutor.java:31)
+        at com.google.common.util.concurrent.AbstractFuture.executeListener(AbstractFuture.java:1270)
+        at com.google.common.util.concurrent.AbstractFuture.addListener(AbstractFuture.java:761)
+        at com.google.common.util.concurrent.FluentFuture$TrustedFuture.addListener(FluentFuture.java:114)
+        at com.google.common.util.concurrent.AbstractTransformFuture.create(AbstractTransformFuture.java:43)
+        at com.google.common.util.concurrent.Futures.transformAsync(Futures.java:456)
+        at org.opendaylight.yangtools.yang.parser.repo.SharedEffectiveModelContextFactory.resolveEntry(SharedEffectiveModelContextFactory.java:194)
+        at org.opendaylight.yangtools.yang.parser.repo.SharedEffectiveModelContextFactory.computeModel(SharedEffectiveModelContextFactory.java:176)
+        at org.opendaylight.yangtools.yang.parser.repo.SharedEffectiveModelContextFactory.createEffectiveModel(SharedEffectiveModelContextFactory.java:134)
+        at org.opendaylight.yangtools.yang.parser.repo.SharedEffectiveModelContextFactory.createEffectiveModelContext(SharedEffectiveModelContextFactory.java:129)
+        at org.opendaylight.netconf.sal.connect.netconf.NetconfDevice$SchemaSetup.trySetupSchema(NetconfDevice.java:510)
+        at org.opendaylight.netconf.sal.connect.netconf.NetconfDevice$SchemaSetup.onFailure(NetconfDevice.java:503)
+        at com.google.common.util.concurrent.Futures$CallbackListener.run(Futures.java:1124)
+        at com.google.common.util.concurrent.DirectExecutor.execute(DirectExecutor.java:31)
+        at com.google.common.util.concurrent.AbstractFuture.executeListener(AbstractFuture.java:1270)
+        at com.google.common.util.concurrent.AbstractFuture.addListener(AbstractFuture.java:761)
+        at com.google.common.util.concurrent.AbstractFuture$TrustedFuture.addListener(AbstractFuture.java:136)
+        at com.google.common.util.concurrent.Futures.addCallback(Futures.java:1105)
+        at org.opendaylight.netconf.sal.connect.netconf.NetconfDevice$SchemaSetup.trySetupSchema(NetconfDevice.java:510)
+        at org.opendaylight.netconf.sal.connect.netconf.NetconfDevice$SchemaSetup.onFailure(NetconfDevice.java:503)
+        at com.google.common.util.concurrent.Futures$CallbackListener.run(Futures.java:1124)
+        at com.google.common.util.concurrent.DirectExecutor.execute(DirectExecutor.java:31)
+        at com.google.common.util.concurrent.AbstractFuture.executeListener(AbstractFuture.java:1270)
+        at com.google.common.util.concurrent.AbstractFuture.addListener(AbstractFuture.java:761)
+        at com.google.common.util.concurrent.AbstractFuture$TrustedFuture.addListener(AbstractFuture.java:136)
+        at com.google.common.util.concurrent.Futures.addCallback(Futures.java:1105)
+        at org.opendaylight.netconf.sal.connect.netconf.NetconfDevice$SchemaSetup.trySetupSchema(NetconfDevice.java:510)
+        at org.opendaylight.netconf.sal.connect.netconf.NetconfDevice$SchemaSetup.startResolution(NetconfDevice.java:463)
+        at org.opendaylight.netconf.sal.connect.netconf.NetconfDevice.assembleSchemaContext(NetconfDevice.java:304)
+        at org.opendaylight.netconf.sal.connect.netconf.NetconfDevice.lambda$onRemoteSessionUp$0(NetconfDevice.java:175)
+        at com.google.common.util.concurrent.AbstractTransformFuture$AsyncTransformFuture.doTransform(AbstractTransformFuture.java:221)
+        at com.google.common.util.concurrent.AbstractTransformFuture$AsyncTransformFuture.doTransform(AbstractTransformFuture.java:208)
+        at com.google.common.util.concurrent.AbstractTransformFuture.run(AbstractTransformFuture.java:122)
+        at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+        at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+        at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.opendaylight.yangtools.yang.parser.api.YangParserException: Failed to assemble sources
+        at org.opendaylight.yangtools.yang.parser.impl.DefaultYangParser.decodeReactorException(DefaultYangParser.java:104)
+        at org.opendaylight.yangtools.yang.parser.impl.DefaultYangParser.buildEffectiveModel(DefaultYangParser.java:98)
+        at org.opendaylight.yangtools.yang.parser.repo.AssembleSources.apply(AssembleSources.java:91)
+        ... 41 more
+Caused by: org.opendaylight.yangtools.yang.parser.spi.meta.SomeModifiersUnresolvedException: Some of EFFECTIVE_MODEL modifiers for statements were not resolved.
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.BuildGlobalContext.propagateException(BuildGlobalContext.java:236)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.BuildGlobalContext.transformEffective(BuildGlobalContext.java:263)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.BuildGlobalContext.buildEffective(BuildGlobalContext.java:211)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.CrossSourceStatementReactor$BuildAction.buildEffective(CrossSourceStatementReactor.java:224)
+        at org.opendaylight.yangtools.yang.parser.impl.DefaultYangParser.buildEffectiveModel(DefaultYangParser.java:96)
+        ... 42 more
+Caused by: com.google.common.base.VerifyException: expected a non-null reference
+        at com.google.common.base.Verify.verifyNotNull(Verify.java:503)
+        at com.google.common.base.Verify.verifyNotNull(Verify.java:479)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.AbstractResumedStatement.mutableDeclaredSubstatements(AbstractResumedStatement.java:64)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.RootStatementContext.mutableDeclaredSubstatements(RootStatementContext.java:49)
+        at org.opendaylight.yangtools.yang.parser.spi.meta.StmtContext$Mutable.declaredSubstatements(StmtContext.java:236)
+        at org.opendaylight.yangtools.yang.parser.spi.meta.StmtContextUtils.getRootModuleQName(StmtContextUtils.java:560)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.InferredStatementContext.requestSchemaTreeChild(InferredStatementContext.java:439)
+        at org.opendaylight.yangtools.yang.parser.spi.SchemaTreeNamespace.requestFrom(SchemaTreeNamespace.java:75)
+        at org.opendaylight.yangtools.yang.parser.spi.SchemaTreeNamespace.getFrom(SchemaTreeNamespace.java:69)
+        at org.opendaylight.yangtools.yang.parser.spi.SchemaTreeNamespace.getFrom(SchemaTreeNamespace.java:37)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.NamespaceBehaviourWithListeners.getFrom(NamespaceBehaviourWithListeners.java:112)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ReactorStmtCtx.namespaceItem(ReactorStmtCtx.java:330)
+        at org.opendaylight.yangtools.yang.parser.spi.meta.NamespaceStmtCtx.getFromNamespace(NamespaceStmtCtx.java:90)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.StatementContextBase.onNamespaceItemAddedAction(StatementContextBase.java:611)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ModifierImpl$AbstractPathPrerequisite.hookOnto(ModifierImpl.java:378)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ModifierImpl$AbstractPathPrerequisite.hookOnto(ModifierImpl.java:373)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ModifierImpl.lambda$requiresCtxPath$1(ModifierImpl.java:190)
+        at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ModifierImpl.apply(ModifierImpl.java:274)
+        at org.opendaylight.yangtools.yang.parser.rfc7950.stmt.meta.UniqueStatementSupport$RequireEffectiveList.apply(UniqueStatementSupport.java:152)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ModifierImpl.tryApply(ModifierImpl.java:147)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ModifierImpl$PhaseFinished.phaseFinished(ModifierImpl.java:401)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.StatementContextBase.addPhaseCompletedListener(StatementContextBase.java:699)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ModifierImpl.lambda$requiresCtxImpl$0(ModifierImpl.java:119)
+        at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ModifierImpl.apply(ModifierImpl.java:274)
+        at org.opendaylight.yangtools.yang.parser.rfc7950.stmt.meta.UniqueStatementSupport.onStatementAdded(UniqueStatementSupport.java:93)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.StatementDefinitionContext.onStatementAdded(StatementDefinitionContext.java:67)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ReactorStmtCtx.replicaAsChildOf(ReactorStmtCtx.java:370)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.StatementContextBase.copyAsChildOfImpl(StatementContextBase.java:755)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.StatementContextBase.copyAsChildOf(StatementContextBase.java:743)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.InferredStatementContext.copySubstatement(InferredStatementContext.java:597)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.InferredStatementContext.copySubstatement(InferredStatementContext.java:586)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.InferredStatementContext.initializeSubstatements(InferredStatementContext.java:551)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.InferredStatementContext.ensureEffectiveSubstatements(InferredStatementContext.java:479)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.InferredStatementContext.streamEffective(InferredStatementContext.java:504)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.InferredStatementContext.createInferredEffective(InferredStatementContext.java:223)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.InferredStatementContext.tryToReuseSubstatements(InferredStatementContext.java:307)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.InferredStatementContext.tryToReusePrototype(InferredStatementContext.java:240)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.InferredStatementContext.createEffective(InferredStatementContext.java:219)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.StatementContextBase.createEffective(StatementContextBase.java:439)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ReactorStmtCtx.loadEffective(ReactorStmtCtx.java:389)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ReactorStmtCtx.buildEffective(ReactorStmtCtx.java:385)
+        at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+        at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
+        at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+        at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+        at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+        at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+        at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+        at org.opendaylight.yangtools.yang.parser.spi.meta.AbstractStatementSupport.buildEffectiveSubstatements(AbstractStatementSupport.java:139)
+        at org.opendaylight.yangtools.yang.parser.spi.meta.AbstractStatementSupport.createEffective(AbstractStatementSupport.java:83)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.AbstractResumedStatement.createEffective(AbstractResumedStatement.java:124)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.AbstractResumedStatement.createEffective(AbstractResumedStatement.java:109)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.StatementContextBase.createEffective(StatementContextBase.java:439)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ReactorStmtCtx.loadEffective(ReactorStmtCtx.java:389)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ReactorStmtCtx.buildEffective(ReactorStmtCtx.java:385)
+        at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+        at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
+        at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+        at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+        at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+        at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+        at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+        at org.opendaylight.yangtools.yang.parser.spi.meta.AbstractStatementSupport.buildEffectiveSubstatements(AbstractStatementSupport.java:139)
+        at org.opendaylight.yangtools.yang.parser.spi.meta.AbstractStatementSupport.createEffective(AbstractStatementSupport.java:83)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.AbstractResumedStatement.createEffective(AbstractResumedStatement.java:124)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.AbstractResumedStatement.createEffective(AbstractResumedStatement.java:109)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.StatementContextBase.createEffective(StatementContextBase.java:439)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ReactorStmtCtx.loadEffective(ReactorStmtCtx.java:389)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ReactorStmtCtx.buildEffective(ReactorStmtCtx.java:385)
+        at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+        at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
+        at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+        at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+        at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+        at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+        at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+        at org.opendaylight.yangtools.yang.parser.spi.meta.AbstractStatementSupport.buildEffectiveSubstatements(AbstractStatementSupport.java:139)
+        at org.opendaylight.yangtools.yang.parser.rfc7950.stmt.module.ModuleStatementSupport.buildEffectiveSubstatements(ModuleStatementSupport.java:227)
+        at org.opendaylight.yangtools.yang.parser.spi.meta.AbstractStatementSupport.createEffective(AbstractStatementSupport.java:83)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.AbstractResumedStatement.createEffective(AbstractResumedStatement.java:124)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.AbstractResumedStatement.createEffective(AbstractResumedStatement.java:109)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.StatementContextBase.createEffective(StatementContextBase.java:439)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ReactorStmtCtx.loadEffective(ReactorStmtCtx.java:389)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.ReactorStmtCtx.buildEffective(ReactorStmtCtx.java:385)
+        at org.opendaylight.yangtools.yang.parser.stmt.reactor.BuildGlobalContext.transformEffective(BuildGlobalContext.java:261)
+        ... 45 more
+ WARN [default-pool-5-1] (NetconfDevice.java:567) - RemoteDevice{lighty16-1}: Unable to build schema context, unsatisfied imports {}, will reattempt with resolved only
+ INFO [nioEventLoopGroup-3-1] (NetconfDevice.java:265) - RemoteDevice{lighty16-1}: Netconf connector initialized successfully
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
